@@ -48,30 +48,22 @@ h2{
 <body class="containner">
 <?php
 //kiem tra nut subbmit da duoc them hay chua
-$id = $_GET["key"];
+    if(isset($_POST["btnthem"]))
+    {
         // require_once gop file neu file gop bi loi thi ma lenh php ben duoi se dung thuc thi
         require_once("connect.php");
         // lay du lieu ti form chuyen len
-        $sql = "select * from sua where id = $id";
-        $result = mysqli_query($conn, $sql);
-        // lay hang trong table
-        //$row chua thong tin cua the loai can sua
-        //$row la mang chua cac tu khoa
-        $row = mysqli_fetch_assoc($result);
-    //cap nhat
-    if(isset($_POST["btncapnhat"]))
-    {
-        
         $ma = $_POST["txtma"];
         $ten = $_POST["txttensua"];
         $hangsua = $_POST["txthangsua"];
         $loaisua = $_POST["txtloaisua"];
         $trongluong = $_POST["txttrongluong"];
         $dongia = $_POST["txtdongia"];
-        $thanhphandinhduong = $_POST["txttpdd"];
+        $thanhphan = $_POST["txttpdd"];
         $loiich = $_POST["txtloiich"];
         $hinhanh = $_POST["txthinhanh"];
-        $sql = "delete from sua where id = $id";
+        $sql = "insert into themsuamoi (masua,tensua,hangsua,loaisua,trongluong,dongia,thanhphandinhduong,loiich,hinhanh)
+                            values('$ma' , '$ten' , '$hangsua' , '$loaisua' , '$trongluong' , '$dongia' , '$thanhphan' , '$loiich' , '$hinhanh')";
         $result = mysqli_query($conn, $sql);
         if($result){
             mysqli_close($conn);
@@ -79,13 +71,13 @@ $id = $_GET["key"];
             header("location:danhsach.php");
         }else
         {
-            echo "update that bai".mysqli_error($conn);
+            echo "them moi that bai".mysqli_error($conn);
         }
     }
     
 ?>
     <form class="div1" method="post"> 
-        <h2>xoa</h2>
+        <h2>Thêm Sữa Mới</h2>
         <table>
             <tr>
                 <td><label for="">Mã Sữa</label></td>
@@ -99,8 +91,13 @@ $id = $_GET["key"];
                 <td><label >Hãng Sữa</label></td>
                 <td>
                     <select name="txthangsua" id="">
-                        <option value="0">Vinamilk</option>
-                        <option value="1">Dutch lady</option>
+                            <option value="Vinamilk">Vinamilk</option>
+                            <option value="Nutifood">Nutifood</option>
+                            <option value="Abbott">Abbott</option>
+                            <option value="Daisy">Daisy</option>
+                            <option value="Dutch Lady">Dutch Lady</option>
+                            <option value="Dumex">Dumex</option>
+                            <option value="Mead Jonhson">Mead Jonhson</option>
                     </select>
                 </td>
             </tr>
@@ -137,7 +134,7 @@ $id = $_GET["key"];
                 <td><input type="file" value="them file" name="txthinhanh"></td>
             </tr>
             <tr>
-                <td><input type="submit" value="capnhat" class="submit" name= "btncapnhat"></td>
+                <td><input type="submit" value="them" class="submit" name= "btnthem"></td>
             </tr>
         </table>
     </form>

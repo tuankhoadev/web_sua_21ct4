@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin</title>
 </head>
 <body>
     <?php 
     require_once("connect.php");
     // tao cau truy van va truy van
-    $sql = "select * from sua";
+    $sql = "select * from themsuamoi";
     //result la table co cac cot la cac thojg tin trong bang the loai(id,ten,thutu,anhien)
     $result = mysqli_query($conn, $sql);
     //kiem tra nut subbmit da duoc them hay chua
@@ -33,17 +33,17 @@
     {
     ?>
     <tr>
-        <td><?php echo $row["ma"]; ?></td>
-        <td><?php echo $row["ten"]; ?></td>
+        <td><?php echo $row["masua"]; ?></td>
+        <td><?php echo $row["tensua"]; ?></td>
         <td><?php echo $row["hangsua"]; ?></td>
         <td><?php echo $row["loaisua"]; ?></td>
         <td><?php echo $row["trongluong"]; ?></td>
         <td><?php echo $row["dongia"]; ?></td>
-        <td><?php echo $row["thanhphan"]; ?></td>
+        <td><?php echo $row["thanhphandinhduong"]; ?></td>
         <td><?php echo $row["loiich"]; ?></td>
         <td><?php echo $row["hinhanh"]; ?></td>
         <td><a href="capnhat.php?key=<?php echo $row['id']; ?>"> sua </a></td>
-        <td><a href="xoa.php?key=<?php echo $row['id']; ?>"> xoa </a></td>
+        <td><a href="xoa.php?key=<?php echo $row['id']; ?>" onclick=" return confirm('Bạn có đồng ý xoá không ? ')">Xoá</a></td>
     </tr>
     <?php 
     }    

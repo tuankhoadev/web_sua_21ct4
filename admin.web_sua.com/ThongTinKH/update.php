@@ -12,7 +12,7 @@
             $id = $_GET["key"];
             // lay thong tin the loai co id laf $id
             require_once("connect.php");
-            $sql = "select * from thongtinkhachhang where id = $id";
+            $sql = "select * from thongtinkh where id = $id";
             // $result laf 1 table (table nay chi co 1 hang)
             $result = mysqli_query($conn,$sql);
             // lay hang trong table
@@ -24,17 +24,17 @@
             {
 
                 // lay du lieu tren form 
-                $Makh = $_POST["txtMakh"];
-                $Ten = $_POST["txtTenkh"];
+                $makh = $_POST["txtMakh"];
+                $tenkhachhang = $_POST["txtTenkh"];
                 $gioitinh = $_POST["txtGioitinh"];
                 $diachi = $_POST["txtDiachi"];
-                $sdt = $_POST["txtSodienthoai"];
+                $sodienthoai = $_POST["txtSodienthoai"];
                 $email = $_POST["txtEmail"];
-                $sql = "update thongtinkhachhang set Makh = '$Makh',
-                                                     Ten = '$Ten',
+                $sql = "update thongtinkh set makh = '$makh',
+                                                     tenkh = '$tenkhachhang',
                                                      gioitinh = '$gioitinh',
                                                      diachi = '$diachi', 
-                                                     sdt = '$sdt, 
+                                                     sodienthoai = '$sodienthoai', 
                                                      email = '$email'
                                                     where id = $id";
                 $result = mysqli_query($conn, $sql);
@@ -55,12 +55,12 @@
                 <caption>CẬP NHẬP THÔNG TIN KHÁCH HÀNG</caption>
                 <tr>
                     <td>Mã Khách hàng: </td>
-                    <td><input type="text" name="txtMakh" value="<?php echo $row['Makh']; ?>"></td>
+                    <td><input type="text" name="txtMakh" value="<?php echo $row['makh']; ?>"></td>
                     
                 </tr>
                 <tr>
                     <td>Tên khách hàng: </td>
-                    <td><input type="text" name="txtTenkh" value="<?php echo $row['Ten']; ?>"></td>
+                    <td><input type="text" name="txtTenkh" value="<?php echo $row['tenkh']; ?>"></td>
                     
                 </tr>
                 <tr>
@@ -78,7 +78,7 @@
                 </tr>
                 <tr>
                     <td>Điện thoại</td>
-                    <td><input type="text" name="txtSodienthoai" value="<?php echo $row['sdt']; ?>"></td>
+                    <td><input type="text" name="txtSodienthoai" value="<?php echo $row['sodienthoai']; ?>"></td>
                     
                 </tr>
                 <tr>

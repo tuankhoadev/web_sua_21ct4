@@ -12,7 +12,7 @@
             $id = $_GET["key"];
             // lay thong tin the loai co id laf $id
             require_once("connect.php");
-            $sql = "select * from thongtinsua where id = $id";
+            $sql = "select * from tts where id = $id";
             // $result laf 1 table (table nay chi co 1 hang)
             $result = mysqli_query($conn,$sql);
             // lay hang trong table
@@ -31,7 +31,7 @@
                 $trongluong = $_POST["txtTrongluong"];
                 $dongia = $_POST["txtDongia"];
 
-                $sql = "delete from thongtinsua  where id = $id";
+                $sql = "delete from tts  where id = $id";
                 $result = mysqli_query($conn, $sql);
                 if($result)
                 {
@@ -49,17 +49,17 @@
             <table>
                 <tr>
                     <td>Số TT</td>
-                    <td><input type="text" name="txtSott" value="<?php echo $row['stt']; ?>"></td>
+                    <td><input type="text" name="txtSott" value="<?php echo $row['sott']; ?>"></td>
                     
                 </tr>
                 <tr>
                     <td>Tên sữa</td>
-                    <td><input type="text" name="txtTensua" value="<?php echo $row['Tensua']; ?>"></td>
+                    <td><input type="text" name="txtTensua" value="<?php echo $row['tensua']; ?>"></td>
                     
                 </tr>
                 <tr>
                     <td>Hãng Sữa</td>
-                    <!-- <td><input type="text" name="txtHangsua" value="<?php echo $row['Hangsua']; ?>"></td> -->
+                    <!-- <td><input type="text" name="txtHangsua" value="<?php echo $row['hangsua']; ?>"></td> -->
                     <td>
                         <select name="txtHangsua" >
                             <option value="Vinamilk">Vinamilk</option>
@@ -75,7 +75,7 @@
                 </tr>
                 <tr>
                     <td>Loại sữa</td>
-                    <!-- <td><input type="text" name="txtLoaisua" value="<?php echo $row['Loaisua']; ?>"></td> -->
+                    <!-- <td><input type="text" name="txtLoaisua" value="<?php echo $row['loaisua']; ?>"></td> -->
                     <td>
                         <select name="txtLoaisua" >
                             <option value="Sữa bột">Sữa bột</option>
@@ -87,12 +87,12 @@
                 </tr>
                 <tr>
                     <td>Trọng lượng</td>
-                    <td><input type="text" name="txtTrongluong" value="<?php echo $row['Trongluong']; ?>"></td>
+                    <td><input type="text" name="txtTrongluong" value="<?php echo $row['trongluong']; ?>"></td>
                     
                 </tr>
                 <tr>
                     <td>Đơn giá</td>
-                    <td><input type="text" name="txtDongia" value="<?php echo $row['Dongia']; ?>"></td>
+                    <td><input type="text" name="txtDongia" value="<?php echo $row['dongia']; ?>"></td>
                     
                 </tr>
                 <tr>

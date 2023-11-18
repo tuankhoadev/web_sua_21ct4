@@ -12,14 +12,14 @@
     box-sizing: border-box;
 }
 .container{
-    width: 750px;
-    height: 500px;
+    width: 1000px;
+    height: 700px;
     /* border: solid black; */
     margin: 20px auto;
-    background-image: url("img/cart.jpeg");
+    background-image: url("img/login.jpg");
 }
 .container a{
-    margin-left: 30px;
+    margin-left: 70px;
 }
 .container a input{
     width: 150px;
@@ -29,17 +29,17 @@
     margin-top: 70px;
 }
 .container h1{
-    padding-left: 200px;
+    padding-left: 300px;
     padding-top: 50px;
 }
 </style>
 <body>
     <div class="container">
         <h1>ĐÂY LÀ TRANG ADMIN</h1>
-        <a href="TongHop/danhsach.php"><input type="button" value="quan ly dat sua" class="nut1"></a>
-        <a href="ThongTinKh/list.php"><input type="button" value="quan ly TT khach hang" class="nut2"></a>
-        <a href="ThongTinHangSua/list.php"><input type="button" value="quan ly ban sua" class="nut3"></a>
-        <a href="ThongTinSua/list.php"><input type="button" value="quan ly thong tin sua" class="nut4"></a>
+        <a href="themsuamoi/danhsach.php"><input type="button" value="Thêm sữa mới" class="nut1"></a>
+        <a href="ThongTinKH/list.php"><input type="button" value="Quản lý TT khách hàng" class="nut2"></a>
+        <a href="ThongTinHangSua/list.php"><input type="button" value="Quản lý bán sữa" class="nut3"></a>
+        <a href="ThongTinSua/list.php"><input type="button" value="Quản lý thông tin sữa" class="nut4"></a>
     </div>
 </body>
 </html>

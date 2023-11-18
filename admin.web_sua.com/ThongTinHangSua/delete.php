@@ -27,7 +27,7 @@
                 $mahs = $_POST["txtMaHS"];
                 $tenhangsua = $_POST["txtTenhangsua"];
                 $diachi = $_POST["txtDiachi"];
-                $dienthoai = $_POST["txtDienthoai"];
+                $sodienthoai = $_POST["txtDienthoai"];
                 $email = $_POST["txtEmail"];
                 $sql = "delete from thongtinhangsua where id = $id";
                 $result = mysqli_query($conn, $sql);
@@ -48,12 +48,12 @@
                 <caption>XOÁ HÃNG SỮA</caption>
             <tr>
                     <td>Mã HS</td>
-                    <td><input type="text" name="txtMaHS" value="<?php echo $row['Mahs']; ?>"></td>
+                    <td><input type="text" name="txtMaHS" value="<?php echo $row['mahs']; ?>"></td>
                     
                 </tr>
                 <tr>
                     <td>Tên hãng sữa</td>
-                    <td><input type="text" name="txtTenhangsua" value="<?php echo $row['Tenhangsua']; ?>"></td>
+                    <td><input type="text" name="txtTenhangsua" value="<?php echo $row['tenhangsua']; ?>"></td>
                     
                 </tr>
                 <tr>
@@ -63,7 +63,7 @@
                 </tr>
                 <tr>
                     <td>Điện thoại</td>
-                    <td><input type="text" name="txtDienthoai" value="<?php echo $row['dienthoai']; ?>"></td>
+                    <td><input type="text" name="txtDienthoai" value="<?php echo $row['sodienthoai']; ?>"></td>
                     
                 </tr>
                 <tr>

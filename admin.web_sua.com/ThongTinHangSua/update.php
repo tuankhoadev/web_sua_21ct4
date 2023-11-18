@@ -24,15 +24,15 @@
             {
 
                 // lay du lieu tren form 
-                $Mahs = $_POST["txtMaHS"];
-                $Tenhangsua = $_POST["txtTenhangsua"];
+                $mahs = $_POST["txtMaHS"];
+                $tenhangsua = $_POST["txtTenhangsua"];
                 $diachi = $_POST["txtDiachi"];
-                $dienthoai = $_POST["txtDienthoai"];
+                $sodienthoai = $_POST["txtDienthoai"];
                 $email = $_POST["txtEmail"];
-                $sql = "update thongtinhangsua set Mahs = '$Mahs',
-                                               Tenhangsua = '$Tenhangsua',
+                $sql = "update thongtinhangsua set mahs = '$mahs',
+                                               tenhangsua = '$tenhangsua',
                                                diachi = '$diachi', 
-                                               dienthoai = '$dienthoai', 
+                                               sodienthoai = '$sodienthoai', 
                                                email = '$email'
                                         where id = $id";
                 $result = mysqli_query($conn, $sql);
@@ -53,12 +53,12 @@
                 <caption>CẬP NHẬP HÃNG SỮA</caption>
                 <tr>
                     <td>Mã HS</td>
-                    <td><input type="text" name="txtMaHS" value="<?php echo $row['Mahs']; ?>"></td>
+                    <td><input type="text" name="txtMaHS" value="<?php echo $row['mahs']; ?>"></td>
                     
                 </tr>
                 <tr>
                     <td>Tên hãng sữa</td>
-                    <td><input type="text" name="txtTenhangsua" value="<?php echo $row['Tenhangsua']; ?>"></td>
+                    <td><input type="text" name="txtTenhangsua" value="<?php echo $row['tenhangsua']; ?>"></td>
                     
                 </tr>
                 <tr>
@@ -68,7 +68,7 @@
                 </tr>
                 <tr>
                     <td>Điện thoại</td>
-                    <td><input type="text" name="txtDienthoai" value="<?php echo $row['dienthoai']; ?>"></td>
+                    <td><input type="text" name="txtDienthoai" value="<?php echo $row['sodienthoai']; ?>"></td>
                     
                 </tr>
                 <tr>

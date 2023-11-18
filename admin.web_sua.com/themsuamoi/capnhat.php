@@ -51,7 +51,7 @@ h2{
         $id = $_GET["key"];
         // require_once gop file neu file gop bi loi thi ma lenh php ben duoi se dung thuc thi
         require_once("connect.php");
-        $sql = "select * from sua where id = $id";
+        $sql = "select * from themsuamoi where id = $id";
         $result = mysqli_query($conn, $sql);
         // lay hang trong table
         //$row chua thong tin cua the loai can sua
@@ -70,13 +70,13 @@ h2{
         $thanhphan = $_POST["txttpdd"];
         $loiich = $_POST["txtloiich"];
         $hinhanh = $_POST["txthinhanh"];
-        $sql = "update sua set ma = '$ma', 
-                                ten = '$ten',
+        $sql = "update themsuamoi set masua = '$ma', 
+                                tensua = '$ten',
                                 hangsua = '$hangsua',
                                 loaisua = '$loaisua',
                                 trongluong = '$trongluong',
                                 dongia = '$dongia',
-                                thanhphan = '$thanhphan',
+                                thanhphandinhduong = '$thanhphan',
                                 loiich = '$loiich',
                                 hinhanh = '$hinhanh'
                                 where id = $id ";
@@ -92,30 +92,35 @@ h2{
     }
     
 ?>
-    <form class="div1" method="post"> 
-        <h2>cap nhat</h2>
+     <form class="div1" method="post"> 
+        <h2>xoa</h2>
         <table>
             <tr>
                 <td><label for="">Mã Sữa</label></td>
-                <td><input type="text" name="txtma"></td>
+                <td><input type="text" name="txtma" value="<?php echo $row['masua']; ?>"></td>
             </tr>
             <tr>
                 <td><label for="">Tên Sữa</label></td>
-                <td><input type="text" name="txttensua"></td>
+                <td><input type="text" name="txttensua" value="<?php echo $row['tensua']; ?>"></td>
             </tr>
             <tr>
                 <td><label >Hãng Sữa</label></td>
                 <td>
-                    <select name="txthangsua" id="">
-                        <option value="0">Vinamilk</option>
-                        <option value="1">Dutch lady</option>
+                    <select name="txthangsua" id="" value="<?php echo $row['hangsua']; ?>">
+                            <option value="Vinamilk">Vinamilk</option>
+                            <option value="Nutifood">Nutifood</option>
+                            <option value="Abbott">Abbott</option>
+                            <option value="Daisy">Daisy</option>
+                            <option value="Dutch Lady">Dutch Lady</option>
+                            <option value="Dumex">Dumex</option>
+                            <option value="Mead Jonhson">Mead Jonhson</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td><label for="">Loại Sữa</label></td>
                 <td>
-                    <select name="txtloaisua" id="">
+                    <select name="txtloaisua" id="" value="<?php echo $row['loaisua']; ?>">
                         <option value="0">sua Tuoi</option>
                         <option value="1">Sua bot</option>
                         <option value="2">Sua chua</option>
@@ -124,25 +129,25 @@ h2{
             </tr>
             <tr>
                 <td> <label for="">Trọng Lượng</label></td>
-                <td><input type="text" name="txttrongluong"></td>
+                <td><input type="text" name="txttrongluong" value="<?php echo $row['trongluong']; ?>"></td>
                 <td><label for="" class="lablel1">(gr hoac ml)</label></td>
             </tr>
             <tr>
                 <td> <label for="">Đơn Giá</label></td>
-                <td><input type="text" name="txtdongia"></td>
+                <td><input type="text" name="txtdongia" value="<?php echo $row['dongia']; ?>"></td>
                 <td><label for="" class="lablel1">(VND)</label></td>
             </tr>
             <tr>
                 <td><label for="">Thành Phần dinh dưỡng</label></td>
-                <td><input type="text" name="txttpdd"></td>
+                <td><input type="text" name="txttpdd" value="<?php echo $row['thanhphandinhduong']; ?>"></td>
             </tr>
             <tr>
                 <td><label for="">Lợi ích</label></td>
-                <td><input type="text" name="txtloiich"></td>
+                <td><input type="text" name="txtloiich" value="<?php echo $row['loiich']; ?>"></td>
             </tr>
             <tr>
                 <td><label for="">Hình ảnh</label></td>
-                <td><input type="file" value="them file" name="txthinhanh"></td>
+                <td><input type="file" value="them file" name="txthinhanh" value="<?php echo $row['hinhanh']; ?>"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="capnhat" class="submit" name= "btncapnhat"></td>

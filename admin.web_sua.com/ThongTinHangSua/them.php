@@ -5,21 +5,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Them Hãng sữa</title>
     </head>
-    <body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 450px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        .container table tr{
+            margin-bottom: 50px;
+        }
+    </style>
+    <body class="container">
         <?php
-            
-            
             if(isset($_POST["btnthem"]))
             {
                 require_once("connect.php");
                 // lay du lieu tren form 
-                $Mahs = $_POST["txtMaHS"];
-                $Tenhangsua = $_POST["txtTenhangsua"];
+                $mahs = $_POST["txtMaHS"];
+                $tenhangsua = $_POST["txtTenhangsua"];
                 $diachi = $_POST["txtDiachi"];
-                $dienthoai = $_POST["txtDienthoai"];
+                $sodienthoai = $_POST["txtDienthoai"];
                 $email = $_POST["txtEmail"];
-                $sql = "insert into thongtinhangsua (Mahs,Tenhangsua,diachi,dienthoai,email)
-                                            values('$Mahs','$Tenhangsua','$diachi','$dienthoai','$email')";
+                $sql = "insert into thongtinhangsua (mahs,tenhangsua,diachi,sodienthoai,email)
+                                            values('$mahs','$tenhangsua','$diachi','$sodienthoai','$email')";
                 $result = mysqli_query($conn, $sql);
                 if($result)
                 {
@@ -34,7 +47,7 @@
 
         ?>
     <form  method="post">
-            <table border="1">
+            <table border="1" class="trangchinh">
                 <caption>THEM HÃNG SỮA</caption>
             <tr>
                     <td>Mã HS</td>

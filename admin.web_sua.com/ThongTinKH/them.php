@@ -12,14 +12,14 @@
             {
                 require_once("connect.php");
                 // lay du lieu tren form 
-                $Makh = $_POST["txtMakh"];
-                $Ten = $_POST["txtTenkh"];
+                $makh = $_POST["txtMakh"];
+                $tenkhachhang = $_POST["txtTenkh"];
                 $gioitinh = $_POST["txtGioitinh"];
                 $diachi = $_POST["txtDiachi"];
-                $sdt = $_POST["txtSodienthoai"];
+                $sodienthoai = $_POST["txtSodienthoai"];
                 $email = $_POST["txtEmail"];
-                $sql = "insert into thongtinkhachhang (Makh,Ten,gioitinh,diachi,sdt,email)
-                                            values('$Makh','$Ten','$gioitinh','$diachi','$sdt','$email')";
+                $sql = "insert into thongtinkh (makh,tenkh,gioitinh,diachi,sodienthoai,email)
+                                            values('$makh','$tenkhachhang','$gioitinh','$diachi','$sodienthoai','$email')";
                 $result = mysqli_query($conn, $sql);
                 if($result)
                 {

@@ -12,15 +12,15 @@
             {
                 require_once("connect.php");
                 // lay du lieu tren form 
-                $stt = $_POST["txtSott"];
-                $Tensua = $_POST["txtTensua"];
-                $Hangsua = $_POST["txtHangsua"];
-                $Loaisua = $_POST["txtLoaisua"];
-                $Trongluong = $_POST["txtTrongluong"];
-                $Dongia = $_POST["txtDongia"];
+                $sott = $_POST["txtSott"];
+                $tensua = $_POST["txtTensua"];
+                $hangsua = $_POST["txtHangsua"];
+                $loaisua = $_POST["txtLoaisua"];
+                $trongluong = $_POST["txtTrongluong"];
+                $dongia = $_POST["txtDongia"];
 
-                $sql = "insert into thongtinsua (stt,Tensua,Hangsua,Loaisua,Trongluong,Dongia)
-                                        values('$stt','$Tensua','$Hangsua','$Loaisua','$Trongluong','$Dongia')";
+                $sql = "insert into tts (sott,tensua,hangsua,loaisua,trongluong,dongia)
+                                        values('$sott','$tensua','$hangsua','$loaisua','$trongluong','$dongia')";
                 $result = mysqli_query($conn, $sql);
                 if($result)
                 {

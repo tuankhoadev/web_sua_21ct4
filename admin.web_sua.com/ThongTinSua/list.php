@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin</title>
     </head>
+    <style>
+        .container{
+            width: 1000px;
+            height: 500px;
+        }
+    </style>
     <body>
         <?php 
             // // Kết nối
@@ -12,7 +18,7 @@
             // // Thiết lập thiết bị
             // mysqli_set_charset($conn,"utf8");
              require_once("connect.php");
-            $sql = "select * from thongtinsua";
+            $sql = "select * from tts";
             $result = mysqli_query($conn,$sql);   
             // $row = mysqli_fetch_assoc($result);         
             
@@ -37,23 +43,23 @@
                 ?>
                     <tr>
                         <td>
-                            <?php  echo $row["stt"]; ?>
+                            <?php  echo $row["sott"]; ?>
                         </td>
                         <td>
-                            <?php  echo $row["Tensua"]; ?>
+                            <?php  echo $row["tensua"]; ?>
                         </td>
                         <td>
-                            <?php echo $row["Hangsua"]?>
+                            <?php echo $row["hangsua"]?>
                         </td>
                         <td>
-                            <?php echo $row["Loaisua"]?>
+                            <?php echo $row["loaisua"]?>
                         </td>
                         
                         <td>
-                            <?php echo $row["Trongluong"]?>
+                            <?php echo $row["trongluong"]?>
                         </td>
                         <td>
-                            <?php echo $row["Dongia"]?>
+                            <?php echo $row["dongia"]?>
                         </td>
 
                         <td><a href="update.php?key=<?php echo $row['id']; ?>">Sửa</a></td>
@@ -65,8 +71,6 @@
                     }
                     mysqli_close($conn);
                 ?>
-
-                
             </table>
         </div>
     </body>

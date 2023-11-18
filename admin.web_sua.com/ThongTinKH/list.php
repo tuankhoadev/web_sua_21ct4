@@ -12,7 +12,7 @@
             // // Thiết lập thiết bị
             // mysqli_set_charset($conn,"utf8");
              require_once("connect.php");
-            $sql = "select * from thongtinkhachhang";
+            $sql = "select * from thongtinkh";
             $result = mysqli_query($conn,$sql);   
             // $row = mysqli_fetch_assoc($result);         
             
@@ -39,10 +39,10 @@
                 ?>
                     <tr>
                         <td>
-                            <?php  echo $row["Makh"]; ?>
+                            <?php  echo $row["makh"]; ?>
                         </td>
                         <td>
-                            <?php  echo $row["Ten"]; ?>
+                            <?php  echo $row["tenkh"]; ?>
                         </td>
                         <td>
                             <?php echo $row["gioitinh"]?>
@@ -51,7 +51,7 @@
                             <?php echo $row["diachi"]?>
                         </td>
                         <td>
-                            <?php echo $row["sdt"]?>
+                            <?php echo $row["sodienthoai"]?>
                         </td>
                         <td>
                             <?php echo $row["email"]?>

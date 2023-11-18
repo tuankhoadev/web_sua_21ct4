@@ -36,16 +36,16 @@
                 ?>
                     <tr>
                         <td>
-                            <?php  echo $row["Mahs"]; ?>
+                            <?php  echo $row["mahs"]; ?>
                         </td>
                         <td>
-                            <?php  echo $row["Tenhangsua"]; ?>
+                            <?php  echo $row["tenhangsua"]; ?>
                         </td>
                         <td>
                             <?php echo $row["diachi"]?>
                         </td>
                         <td>
-                            <?php echo $row["dienthoai"]?>
+                            <?php echo $row["sodienthoai"]?>
                         </td>
                         <td>
                             <?php echo $row["email"]?>
