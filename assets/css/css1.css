@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img {
+    width: 200px;
+    height: 75px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px 12px 0;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #c8f0f872;
+}
+.logo {
+    flex: 1;;
+}
+/*---------------menu------------*/
+.menu {
+    flex: 3;
+    display: flex;
+    z-index: 1000;
+    background: rgb(244, 244, 244);
+    /*cho các li vào giữa thanh menu*/
+    text-align: center;
+    padding: 5px 0;
+}
+
+.menu li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.menu li a {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+}
+
+.menu ul li{
+    /*bỏ dấu chấm tròn mặc định của li*/
+    list-style: none;
+    /*dàn các li nằm ngang*/
+    /*inline: dàn ngang các li, block: quy định kích thước các li*/
+    display: inline-block;
+    border: 1px solid white;
+    width: 120px;
+    /*đẩy các li xa nhau 1 khoảng cách*/
+    margin-left: 15px;
+    padding: 7px 0;
+    /*chuyển tiếp*/
+    transition: 1s;
+    border-radius: 4px;
+    position: relative;
+}
+.menu ul li a{
+    color: rgb(3, 0, 0);
+    text-decoration: none;
+    display: block;
+    transition: 1s;
+}
+
+.menu ul li:hover .submenu{
+    display: block;
+}
+.menu ul li .submenu{
+    position: absolute;
+    background: rgb(250, 253, 250);
+    top: 100%;
+    left: 15px;
+    padding: 5px;
+    /*ẩn đi*/
+    display: none;
+}
+.menu ul li .submenu ul li{
+    text-align: left;
+    margin-left: 0;
+    width: 140px;
+    border-bottom: 1px dotted rgb(17, 8, 8);
+    border-radius: 0;
+    padding: 10px;
+}
+
+.submenu {
+    position: absolute;
+    width: 380px;
+    height: 260px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.5s;
+    background-color: #ddedf4;
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.submenu li a {
+    font-weight: normal;
+    transition: font-size 0.5s;
+}
+
+.submenu li a:hover {
+    color: rgb(0, 85, 255);
+    font-size: 23px;
+}
+
+.submenu li a:active {
+    color: rgb(72, 167, 249);
+    text-decoration: underline;
+}
+/* -----------end menu---------------*/
+
+
+.option {
+    flex: 1;
+    display: flex;
+}
+
+.option li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.option li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.option li:last-child::after {
+    display: none;
+}
+
+.option li:first-child {
+    position: relative;
+}
+
+.option li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    background: transparent;
+    outline: none;
+}
+
+.option li:first-child i {
+    position: absolute;
+    right: 10px;
+}
