@@ -71,7 +71,7 @@ $id = $_GET["key"];
         $thanhphandinhduong = $_POST["txttpdd"];
         $loiich = $_POST["txtloiich"];
         $hinhanh = $_POST["txthinhanh"];
-        $sql = "delete from themsuamoi where id = $id";
+        $sql = "delete from sua where id = $id";
         $result = mysqli_query($conn, $sql);
         if($result){
             mysqli_close($conn);

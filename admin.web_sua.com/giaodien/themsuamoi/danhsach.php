@@ -9,7 +9,7 @@
     <?php 
     require_once("connect.php");
     // tao cau truy van va truy van
-    $sql = "select * from sua inner join themmoi";
+    $sql = "select * from sua";
     // $sql = "select * from themmoi";
     //result la table co cac cot la cac thojg tin trong bang the loai(id,ten,thutu,anhien)
     $result = mysqli_query($conn, $sql);
@@ -27,7 +27,7 @@
         <td>Thanh phan dinh duong</td>
         <td>Loi ich</td>
         <td>Anh</td>
-        <td colspan="2"><a href="them.php">Them</a></td>
+        <td colspan="2"><a href="them.php">Thêm</a></td>
     </tr>
     <?php 
     while($row = mysqli_fetch_assoc($result))
@@ -42,8 +42,8 @@
         <td><?php echo $row["dongia"]; ?></td>
         <td><?php echo $row["thanhphandinhduong"]; ?></td>
         <td><?php echo $row["loiich"]; ?></td>
-        <td><img src="themsuamoi/img/<?php echo $row['hinhanh'] ?>" width="150px"  style="height: 150px;"></td>
-        <td><a href="capnhat.php?key=<?php echo $row['id']; ?>"> sua </a></td>
+        <td><img src="giaodien/images/<?php echo $row['hinhanh'] ?>" width="150px"  style="height: 150px;"></td>
+        <td><a href="capnhat.php?key=<?php echo $row['id']; ?>"> Sửa </a></td>
         <td><a href="xoa.php?key=<?php echo $row['id']; ?>" onclick=" return confirm('Bạn có đồng ý xoá không ? ')">Xoá</a></td>
     </tr>
     <?php 

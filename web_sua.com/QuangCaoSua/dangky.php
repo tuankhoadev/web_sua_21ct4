@@ -21,7 +21,7 @@ session_start();
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: url(img/bgsp.jpeg);
+        background: url(img/grow.jpg);
         background-size: cover;
         background-position: center;
     }

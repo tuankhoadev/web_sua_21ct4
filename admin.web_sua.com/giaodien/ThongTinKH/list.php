@@ -6,6 +6,7 @@
         <title>Admin</title>
     </head>
     <body>
+        
         <?php 
             // // Kết nối
             // $conn = mysqli_connect("localhost","root","","web_sua") or die("Kết nối thất bại");
@@ -17,6 +18,7 @@
             // $row = mysqli_fetch_assoc($result);         
             
         ?>
+    
         <div class="container">
             <table border="1">
                 <caption>THÔNG TIN KHÁCH HÀNG</caption>

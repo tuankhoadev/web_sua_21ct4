@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>THÊM SỮA MỚI</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <style>
@@ -51,7 +51,7 @@ h2{
         $id = $_GET["key"];
         // require_once gop file neu file gop bi loi thi ma lenh php ben duoi se dung thuc thi
         require_once("connect.php");
-        $sql = "select * from sua where id = $id";
+        $sql = "select * from sua  where id = $id";
         $result = mysqli_query($conn, $sql);
         // lay hang trong table
         //$row chua thong tin cua the loai can sua
@@ -70,16 +70,9 @@ h2{
         $thanhphan = $_POST["txttpdd"];
         $loiich = $_POST["txtloiich"];
         $hinhanh = $_POST["txthinhanh"];
-        $sql = "update themsuamoi set masua = '$ma', 
-                                tensua = '$ten',
-                                hangsua = '$hangsua',
-                                loaisua = '$loaisua',
-                                trongluong = '$trongluong',
-                                dongia = '$dongia',
-                                thanhphandinhduong = '$thanhphan',
-                                loiich = '$loiich',
-                                hinhanh = '$hinhanh'
-                                where id = $id ";
+        $sql = "update sua set masua = '$ma', tensua = '$ten', hangsua = '$hangsua', loaisua = '$loaisua', trongluong = '$trongluong',
+                                dongia = '$dongia', thanhphandinhduong = '$thanhphan', loiich = '$loiich', hinhanh = '$hinhanh' 
+                                where id = $id";
         $result = mysqli_query($conn, $sql);
         if($result){
             mysqli_close($conn);
@@ -121,9 +114,9 @@ h2{
                 <td><label for="">Loại Sữa</label></td>
                 <td>
                     <select name="txtloaisua" id="" value="<?php echo $row['loaisua']; ?>">
-                        <option value="0">sua Tuoi</option>
-                        <option value="1">Sua bot</option>
-                        <option value="2">Sua chua</option>
+                        <option value="sữa tươi">Sữa Tươi</option>
+                        <option value="sữa bột">Sữa Bột</option>
+                        <option value="sữa chua">Sữa Chua</option>
                     </select>
                 </td>
             </tr>

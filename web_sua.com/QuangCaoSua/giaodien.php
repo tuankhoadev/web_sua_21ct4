@@ -7,75 +7,9 @@
     <link rel="stylesheet" href="assets/main.css">
     <link rel="stylesheet" href="/font/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
+    <link rel="stylesheet" href="assets/product.css">
 
 </head>
-<style>
-    .row{
-    display: flex;
-    flex-wrap: wrap;
-}
-.cartegory{
-    padding: 100px 0 0;
-}
-.cart-center{
-    width: 100%;
-}
-.cart-top-items:first-child{
-    flex: 2;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-.cart-top-items{
-    flex: 1;
-    padding: 0 12px;
-}
-.cart-top-items select{
-    width: 100%;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #ffff;
-    border: 1px solid #dddddd;
-    cursor: pointer;
-}
-.cart-content{
-    margin-top: 20px;
-    justify-content: space-between;
-}
-.cart-content-items{
-    width: calc(25%-12px);
-    text-align: center;
-    padding: 12px 0;
-}
-.cart-content-items h1{
-    font-size: 11px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 6px;
-    color: #333333;
-}
-.cart-content-items img{
-    width: 100%;
-}
-
-.product-info {
-    height: 300px;
-    width: 200px;
-    border: 1px solid grey;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-.product-info img{
-    height: 170px;
-    width: 195px;
-    text-align: center;
-}
-.product-info p{
-    text-align: center;
-}
-
-</style>
 <body>
     <?php 
         require_once("sql/connect.php");
