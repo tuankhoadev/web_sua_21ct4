@@ -4,6 +4,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin</title>
+        <style>
+            .container{
+                border: 1px solid #000;
+                width: 70%;;
+                margin: auto;
+            }
+            .side{
+                width: 100%;
+            }
+            caption{
+                padding-top: 15px;
+                font-size: 30px;
+                font-weight: bold;
+                color: blue;
+                font-family:'Courier New', Courier, monospace
+            }
+             .color_header{
+                background: #e0eeee;
+            }
+            .content a{
+                text-decoration: none;
+                color: #000;
+            }
+            tr{
+            text-align: center;
+            height: 30px;
+        }
+        </style>
     </head>
     <style>
             .container {

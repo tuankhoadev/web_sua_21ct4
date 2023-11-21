@@ -50,33 +50,33 @@
 </style>
 <body>
     <div class="sidebar">
-    <div class="item">
-            <img src="giaodien/images/icon/R.png" class="icon">
-            <div class="text"><a href="giaodienadmin.php"> HOME</a></div>
-        </div>
         <div class="item">
-            <img src="giaodien/images/icon/pngtree-vector-edit-profile-icon-png-image_779401.jpg" class="icon">
-            <div class="text"> PROFILE ADMIN </div>
-        </div>
-        <div class="item">
-            <img src="giaodien/images/icon/OIP (5).jpg" class="icon">
-            <div class="text"><a href="web_sua.com/QuangCaoSua/giaodien.php">TRANG USER</a></div>
-        </div>
-        <div class="item">
-            <img src="giaodien/images/icon/3285755.png" class="icon">
-            <div class="text"><a href="giaodien/themsuamoi/danhsach.php">QUẢN LÝ THÊM SẢN PHẨM MỚI</a></div>
-        </div>
-        <div class="item">
-            <img src="giaodien/images/icon/Green-Plus-Sign-550x550.png" class="icon">
-            <div class="text"><a href="giaodien/ThongTinSua/list.php">QUẢN LÝ CÁC LOẠI SỮA</a></div>
-        </div>  
-        <div class="item">
-            <img src="giaodien/images/icon/R (1).png" class="icon">
-            <div class="text"><a href="giaodien/ThongTinHangSua/list.php">QUẢN LÝ CÁC HÃNG SỮA</a></div>
-        </div>
-        <div class="item">
-            <img src="giaodien/images/icon/OIP (3).jpg" class="icon">
-            <div class="text"><a href="giaodien/ThongTinKH/list.php">QUẢN LÝ KHÁCH HÀNG</a></div>
+                <img src="giaodien/images/icon/R.png" class="icon">
+                <div class="text"><a href="giaodienadmin.php"> HOME</a></div>
+            </div>
+            <div class="item">
+                <img src="giaodien/images/icon/pngtree-vector-edit-profile-icon-png-image_779401.jpg" class="icon">
+                <div class="text"> <a href="">PROFILE ADMIN</a> </div>
+            </div>
+            <div class="item">
+                <img src="giaodien/images/icon/OIP (5).jpg" class="icon">
+                <div class="text"><a href="web_sua.com/QuangCaoSua/giaodien.php">TRANG USER</a></div>
+            </div>
+            <div class="item">
+                <img src="giaodien/images/icon/3285755.png" class="icon">
+                <div class="text"><a href="giaodien/themsuamoi/danhsach.php">QUẢN LÝ THÊM SẢN PHẨM MỚI</a></div>
+            </div>
+            <div class="item">
+                <img src="giaodien/images/icon/Green-Plus-Sign-550x550.png" class="icon">
+                <div class="text"><a href="giaodien/ThongTinSua/list.php">QUẢN LÝ CÁC LOẠI SỮA</a></div>
+            </div>  
+            <div class="item">
+                <img src="giaodien/images/icon/R (1).png" class="icon">
+                <div class="text"><a href="giaodien/ThongTinHangSua/list.php">QUẢN LÝ CÁC HÃNG SỮA</a></div>
+            </div>
+            <div class="item">
+                <img src="giaodien/images/icon/OIP (3).jpg" class="icon">
+                <div class="text"><a href="giaodien/ThongTinKH/list.php">QUẢN LÝ KHÁCH HÀNG</a></div>
         </div>
     </div>
 </body>

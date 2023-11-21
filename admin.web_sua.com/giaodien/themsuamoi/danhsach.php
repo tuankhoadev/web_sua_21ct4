@@ -4,6 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <style>
+        .container {
+            border: 1px solid #000;
+            margin: auto;
+        }
+        caption{
+            padding-top: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: blue;
+            font-family:'Courier New', Courier, monospace
+            
+        }
+        .side{
+            width: 100%;
+        }
+        .color_header{
+            background: #e0eeee;
+        }
+        tr{
+            text-align: center;
+            height: 30px;
+        }
+        .content a{
+            color: #000;
+            text-decoration: none;
+        }
+        .tieude{
+            height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+    </style>
 </head>
 <style>
         .container {
@@ -49,7 +83,11 @@
     $result = mysqli_query($conn, $sql);
     //kiem tra nut subbmit da duoc them hay chua
     ?>
+<<<<<<< HEAD
      <div class="container">
+=======
+    <div class="container">
+>>>>>>> 5f4643da609d1b62902a4c159caa9fbc44c2de21
         <table class="side" border="1">
                 <caption class="color_header">THÔNG TIN HÃNG SỮA</caption>
 
@@ -88,6 +126,10 @@
         mysqli_close($conn)
         ?>
         </table>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f4643da609d1b62902a4c159caa9fbc44c2de21
     </div>
 </body>
 </html>
