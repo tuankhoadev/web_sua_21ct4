@@ -4,6 +4,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin</title>
+        <style>
+            .container {
+                /* width: 726px; */
+                width: 60%;
+                border: 1px solid #000;
+                /* text-align: center; */
+                /* background-color: brown; */
+                margin:auto;
+            }
+            .side{
+                width: 100%;
+            }
+            .color_header{
+                background: #e0eeee;
+
+            }
+            caption{
+                padding-top: 15px;
+                font-size: 30px;
+                font-weight: bold;
+                color: blue;
+                font-family:'Courier New', Courier, monospace
+            }
+            
+            .content a{
+                text-decoration: none;
+                color: #000;
+            }
+            tr{
+            text-align: center;
+            height: 30px;
+        }
+           
+            
+        </style>
     </head>
     <body>
         <?php 
@@ -18,15 +53,16 @@
             
         ?>
         <div class="container">
-            <table border="1">
-                <caption>THÔNG TIN HÃNG SỮA</caption>
+            <table class="side" border="1">
+                
+                <caption class="color_header" >THÔNG TIN HÃNG SỮA</caption>
                 <tr>
                     <th>Mã HS</th>
                     <th>Tên hãng sữa</th>
                     <th>Địa chỉ</th>
                     <th>Điện thoại</th>
                     <th>Email</th>
-                    <th colspan="2"><a href="them.php">Thêm</a></th>
+                    <th class="content" colspan="2"><a href="them.php">Thêm</a></th>
                 </tr>
 
                 <!-- Hàng nội dung lấy từ CSDL -->
@@ -34,7 +70,7 @@
                     while($row = mysqli_fetch_assoc($result))
                     {
                 ?>
-                    <tr>
+                    <tr class="content">
                         <td>
                             <?php  echo $row["mahs"]; ?>
                         </td>

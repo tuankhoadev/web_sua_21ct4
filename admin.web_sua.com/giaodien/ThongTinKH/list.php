@@ -4,6 +4,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin</title>
+        <style>
+            .container{
+                border: 1px solid #000;
+                width: 70%;;
+                margin: auto;
+            }
+            .side{
+                width: 100%;
+            }
+            caption{
+                padding-top: 15px;
+                font-size: 30px;
+                font-weight: bold;
+                color: blue;
+                font-family:'Courier New', Courier, monospace
+            }
+             .color_header{
+                background: #e0eeee;
+            }
+            .content a{
+                text-decoration: none;
+                color: #000;
+            }
+            tr{
+            text-align: center;
+            height: 30px;
+        }
+        </style>
     </head>
     <body>
         
@@ -20,8 +48,8 @@
         ?>
     
         <div class="container">
-            <table border="1">
-                <caption>THÔNG TIN KHÁCH HÀNG</caption>
+            <table class="side" border="1">
+                <caption class="color_header">THÔNG TIN KHÁCH HÀNG</caption>
                 <tr>
                     <th>Mã KH</th>
                     <th>Tên khách Hàng</th>
@@ -30,7 +58,7 @@
                     <th>Số điện thoại</th>
                     <th>Email</th>
                     
-                    <th colspan="2"><a href="them.php">Thêm</a></th>
+                    <th class="content" colspan="2"><a href="them.php">Thêm</a></th>
                     
                 </tr>
 
@@ -39,7 +67,7 @@
                     while($row = mysqli_fetch_assoc($result))
                     {
                 ?>
-                    <tr>
+                    <tr class="content">
                         <td>
                             <?php  echo $row["makh"]; ?>
                         </td>

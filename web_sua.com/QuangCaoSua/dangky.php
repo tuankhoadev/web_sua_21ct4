@@ -21,7 +21,7 @@ session_start();
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: url(img/grow.jpg);
+        background: #ffcccc;
         background-size: cover;
         background-position: center;
     }
@@ -51,7 +51,7 @@ session_start();
         background: transparent;
         border: none;
         outline: none;
-        border: 2px solid rgba(255, 255, 255, .2);
+        border: 2px solid rgb(90 19 19 / 20%);
         border-radius: 40px;
         font-size: 16px;
         color: rgb(231, 235, 238);
@@ -63,6 +63,9 @@ session_start();
         top: 15px;
         transform: translate(-50%);
         font-size: 20px;
+    }
+    .input-box ::placeholder{
+        color: #fff;
     }
     .wrapper .remember-forget{
         display: flex;
@@ -81,7 +84,7 @@ session_start();
     .wrapper .btn{
         width: 100%;
         height: 45px;
-        background: #581010;
+        background: #52581070;
         border: none;
         outline: none;
         border-radius: 40px;
@@ -97,7 +100,7 @@ session_start();
         margin-top: 20px 0 15px;
     }
     .register-link p a{
-        color: #f4f2f2;
+        color: #fff;
         text-decoration: none;
         font-weight: 600;
     }

@@ -185,12 +185,18 @@
                     while($row = mysqli_fetch_assoc($result)){
                 ?>
                 <div class="product-info">
-                    <img src="images/product/<?php echo $row["masua"]; ?>.webp" alt="Ảnh minh hoạ">
-                    <p><?php echo $row["tensua"]; ?></p>
-                    <p><?php echo $row["loaisua"];?></p>
-                    <p><?php echo $row["hangsua"];?></p>
-                    <p><?php echo $row["trongluong"];?></p>
-                    <p><?php echo $row["dongia"];?></p>
+                    <div class="img">
+
+                        <img src="images/product/<?php echo $row["masua"]; ?>.webp" alt="Ảnh minh hoạ">
+                    </div>
+                    <div class="text">
+                        <p><?php echo $row["tensua"]; ?></p>
+                        <p><?php echo $row["loaisua"];?></p>
+                        <p><?php echo $row["hangsua"];?></p>
+                        <p><?php echo $row["trongluong"];?></p>
+                        <p><?php echo $row["dongia"];?></p>
+
+                    </div>
                     
                 </div>
                 <?php

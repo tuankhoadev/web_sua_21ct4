@@ -7,8 +7,33 @@
     </head>
     <style>
         .container{
-            width: 1000px;
-            height: 500px;
+            width: 100%;
+            
+            border: 1px solid #000;
+            
+        }
+        caption{
+            padding-top: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: blue;
+            font-family:'Courier New', Courier, monospace
+        }
+        caption .color_header{
+            background: #e0eeee;
+        }
+        
+        .side{
+            width: 100%;
+            height: 80%;
+        }
+        tr{
+            text-align: center;
+            height: 30px;
+        }
+        .content a{
+            color: #000;
+            text-decoration: none;
         }
     </style>
     <body>
@@ -24,8 +49,8 @@
             
         ?>
         <div class="container">
-            <table border="1">
-                <caption>THÔNG TIN SỮA</caption>
+            <table class="side" border="1">
+                <caption class="color_header">THÔNG TIN SỮA</caption>
                 <tr>
                     <th>Số TT</th>
                     <th>Tên sữa</th>
@@ -33,7 +58,7 @@
                     <th>Loại sữa</th>
                     <th>Trọng lượng</th>
                     <th>Đơn giá</th>
-                    <th colspan="2"><a href="them.php">Thêm</a></th>
+                    <th class="content" colspan="2"><a href="them.php">Thêm</a></th>
                 </tr>
 
                 <!-- Hàng nội dung lấy từ CSDL -->
@@ -41,7 +66,7 @@
                     while($row = mysqli_fetch_assoc($result))
                     {
                 ?>
-                    <tr>
+                    <tr class="content">
                         <td>
                             <?php  echo $row["sott"]; ?>
                         </td>

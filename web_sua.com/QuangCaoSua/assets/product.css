@@ -1,19 +1,4 @@
 
-.product-info {
-    height: 300px;
-    width: 200px;
-    border: 1px solid grey;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-.product-info img{
-    height: 170px;
-    width: 195px;
-    text-align: center;
-}
-.product-info p{
-    text-align: center;
-}
 .content{
     float: left;
 }
