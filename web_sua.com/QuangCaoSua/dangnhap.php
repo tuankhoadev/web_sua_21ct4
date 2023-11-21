@@ -20,7 +20,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(img/bgsp.jpeg);
+    background: #ffcccc;
     background-size: cover;
     background-position: center;
 }
@@ -50,7 +50,7 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgb(90 19 19 / 20%);
     border-radius: 40px;
     font-size: 16px;
     color: rgb(231, 235, 238);
@@ -63,6 +63,9 @@ body{
     transform: translate(-50%);
     font-size: 20px;
 }
+.input-box ::placeholder{
+        color: #fff;
+    }
 .wrapper .remember-forget{
     display: flex;
     justify-content: space-between;
@@ -80,7 +83,7 @@ body{
 .wrapper .btn{
     width: 100%;
     height: 45px;
-    background: #581010;
+    background: #52581070;
     border: none;
     outline: none;
     border-radius: 40px;
@@ -96,9 +99,12 @@ body{
     margin-top: 20px 0 15px;
 }
 .register-link p a{
-    color: #f4f2f2;
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
+}
+.register-link p{
+    padding-top: 16px;
 }
 .register-link p a:hover{
     text-decoration: underline;
