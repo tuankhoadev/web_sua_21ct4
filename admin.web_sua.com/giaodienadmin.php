@@ -56,7 +56,7 @@
             </div>
             <div class="item">
                 <img src="giaodien/images/icon/pngtree-vector-edit-profile-icon-png-image_779401.jpg" class="icon">
-                <div class="text"> <a href="">PROFILE ADMIN</a> </div>
+                <div class="text"> <a href="#">PROFILE ADMIN</a> </div>
             </div>
             <div class="item">
                 <img src="giaodien/images/icon/OIP (5).jpg" class="icon">

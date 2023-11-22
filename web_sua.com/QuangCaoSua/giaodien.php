@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +15,8 @@
 
 <body>
     <?php
+    if(!isset($_SESSION["email"])){
+        header("location:login.php");}
     require_once("connect.php");
     $sql = "select * from sua";
     $result = mysqli_query($conn, $sql);
@@ -53,7 +56,7 @@
                                 <i class="fa-regular fa-circle-question icon-cir item-icon"></i>
                                 <a href="#">Trợ Giúp</a>
                             </li>
-                            <li><a href="dangky.php">Đăng ký</a> </li>
+                            <li><a href="login.php">Đăng ký</a> </li>
                             <li><a href="dangnhap.php">Đăng nhập</a></li>
                         </ul>
                     </div>
