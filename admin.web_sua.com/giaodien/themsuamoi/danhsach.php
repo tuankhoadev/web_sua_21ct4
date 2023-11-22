@@ -113,7 +113,6 @@
             <td><?php echo $row["dongia"]; ?></td>
             <td><?php echo $row["thanhphandinhduong"]; ?></td>
             <td><?php echo $row["loiich"]; ?></td>
-            <td><img src="giaodien/images/<?php echo $row['hinhanh'] ?>" width="150px"  style="height: 150px;"></td>
             <td><a href="capnhat.php?key=<?php echo $row['id']; ?>"> Sửa </a></td>
             <td><a href="xoa.php?key=<?php echo $row['id']; ?>" onclick=" return confirm('Bạn có đồng ý xoá không ? ')">Xoá</a></td>
         </tr>

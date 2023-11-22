@@ -65,7 +65,7 @@
                 </tr>
                 <tr>
                     <td>Hãng Sữa</td>
-                   <?php echo $row['hangsua']; ?>"></td>
+                   <?php echo $row['hangsua']; ?>
                     <td>
                         <select name="txtHangsua" >
                             <option value="Vinamilk">Vinamilk</option>
