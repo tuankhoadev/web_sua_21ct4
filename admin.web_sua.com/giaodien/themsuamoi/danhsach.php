@@ -97,7 +97,6 @@
             <td>Đơn giá</td>
             <td>Thành phần dinh dưỡng</td>
             <td>Lợi ích</td>
-            <td>Ảnh</td>
             <td class="content" colspan="2"><a href="them.php">Thêm</a></td>
         </tr>
         <?php 
