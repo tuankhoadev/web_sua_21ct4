@@ -62,7 +62,7 @@ h2{
         $thanhphan = $_POST["txttpdd"];
         $loiich = $_POST["txtloiich"];
         $sql = "insert into sua (masua,tensua,hangsua,loaisua,trongluong,dongia,thanhphandinhduong,loiich)
-                            values('$ma' , '$ten' , '$hangsua' , '$loaisua' , '$trongluong' , '$dongia' , '$thanhphan' , '$loiich')";
+                            values('$ma','$ten','$hangsua','$loaisua','$trongluong','$dongia','$thanhphan','$loiich')";
         $result = mysqli_query($conn, $sql);
         if($result){
             mysqli_close($conn);
