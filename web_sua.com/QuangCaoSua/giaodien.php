@@ -14,7 +14,7 @@
 
 <body>
     <?php
-    require_once("sql/connect.php");
+    require_once("connect.php");
     $sql = "select * from sua";
     $result = mysqli_query($conn, $sql);
     ?>
