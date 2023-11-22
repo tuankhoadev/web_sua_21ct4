@@ -110,7 +110,7 @@
                 </tr>
                 <tr>
                     <td>Hãng Sữa</td>
-                    <!-- <td><input type="text" name="txtHangsua" value="<?php echo $row['hangsua']; ?>"></td> -->
+                   <?php echo $row['hangsua']; ?>
                     <td>
                         <select name="txtHangsua" >
                             <option value="Vinamilk">Vinamilk</option>

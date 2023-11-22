@@ -61,9 +61,8 @@ h2{
         $dongia = $_POST["txtdongia"];
         $thanhphan = $_POST["txttpdd"];
         $loiich = $_POST["txtloiich"];
-        $hinhanh = $_POST["txthinhanh"];
-        $sql = "insert into sua (masua,tensua,hangsua,loaisua,trongluong,dongia,thanhphandinhduong,loiich,hinhanh)
-                            values('$ma' , '$ten' , '$hangsua' , '$loaisua' , '$trongluong' , '$dongia' , '$thanhphan' , '$loiich' , '$hinhanh')";
+        $sql = "insert into sua (masua,tensua,hangsua,loaisua,trongluong,dongia,thanhphandinhduong,loiich)
+                            values('$ma','$ten','$hangsua','$loaisua','$trongluong','$dongia','$thanhphan','$loiich')";
         $result = mysqli_query($conn, $sql);
         if($result){
             mysqli_close($conn);
@@ -105,9 +104,9 @@ h2{
                 <td><label for="">Loại Sữa</label></td>
                 <td>
                     <select name="txtloaisua" id="">
-                        <option value="0">sua Tuoi</option>
-                        <option value="1">Sua bot</option>
-                        <option value="2">Sua chua</option>
+                        <option value="Sữa Tươi">Sữa Tươi</option>
+                        <option value="Sữa Bột">Sữa Bột</option>
+                        <option value="Sữa Chua">Sữa Chua</option>
                     </select>
                 </td>
             </tr>
@@ -128,10 +127,6 @@ h2{
             <tr>
                 <td><label for="">Lợi ích</label></td>
                 <td><input type="text" name="txtloiich"></td>
-            </tr>
-            <tr>
-                <td><label for="">Hình ảnh</label></td>
-                <td><input type="file" value="them file" name="txthinhanh"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="them" class="submit" name= "btnthem"></td>
