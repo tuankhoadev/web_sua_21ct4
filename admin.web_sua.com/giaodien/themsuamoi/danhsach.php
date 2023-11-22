@@ -126,10 +126,6 @@
         mysqli_close($conn)
         ?>
         </table>
-<<<<<<< HEAD
-=======
-
->>>>>>> 5f4643da609d1b62902a4c159caa9fbc44c2de21
     </div>
 </body>
 </html>

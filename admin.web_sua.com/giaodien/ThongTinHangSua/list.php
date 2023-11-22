@@ -87,12 +87,7 @@
         ?>
         <div class="container">
             <table class="side" border="1">
-<<<<<<< HEAD
                 <caption class="color_header">THÔNG TIN HÃNG SỮA</caption>
-=======
-                
-                <caption class="color_header" >THÔNG TIN HÃNG SỮA</caption>
->>>>>>> 5f4643da609d1b62902a4c159caa9fbc44c2de21
                 <tr>
                     <th>Mã HS</th>
                     <th>Tên hãng sữa</th>

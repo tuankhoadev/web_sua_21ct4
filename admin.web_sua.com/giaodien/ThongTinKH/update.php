@@ -88,7 +88,7 @@
         ?>
     <form  method="post">
         <div class="container">
-            <div class="header"><h2>Sữa thông tin</h2></div>
+            <div class="header"><h2>SỮA THÔNG TIN </h2></div>
             <table class="side">
                 <tr>
                     <td>Mã Khách hàng: </td>
