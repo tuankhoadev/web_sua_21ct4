@@ -103,7 +103,7 @@
     position: relative;
 }
 .header-input{
-    width: 900px;
+    width: 600px;
     height: 100%;
     border: none;
     outline: none;
@@ -125,6 +125,7 @@
     border-radius: 2px;
     box-shadow: 0 1px 5px #999 ;
     display: none;
+    z-index: 1;
 }
 .history-search{
     color: #999;
@@ -185,7 +186,10 @@
 .good-cart{
     position: relative;
     display: inline-block;
-    padding: 0 12px;
+    padding: 70px 12px;
+    font-size: 2.2rem;
+    z-index: 2;
+    color: #dd1c60;
 }
 .header-cart:hover .cart-list{
     display: block;
@@ -243,19 +247,8 @@
 /* main */
 .main{
     width: 100%;
-    display: flex;
 }
-/* Danh mục */
-.menu{
-    width: 20%;
-    margin-left: 20px;
-    background-color: #fff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding-left: 20px;
 
-    /* position: fixed; */
-}
 h3{
     color:  #FF66FF;
 }
@@ -295,15 +288,14 @@ h3{
     border-right: 1px solid #000;
 }
 .content{
-    margin-left: 20px;
-    margin-top:20px;
-    width: 80%;
+    margin: 0 80px;
+    width: 100%;
 }
 .product-info {
     height: 190px;
     width: 290px;
     border-bottom: 1px solid grey;
-    margin: 5px 25px 40px;
+    margin: 5px 30px 40px;
     float: left;
     cursor: pointer;
 }
@@ -330,7 +322,7 @@ h3{
     display: flex;
     background-color: #fff;
     border-top: 2px dashed #ecca6c;
-    padding: 40px 165px;
+    padding: 40px 15px;
 }
 .footer__pay{
     display: flex;

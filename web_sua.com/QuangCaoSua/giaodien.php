@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,12 @@
     <link rel="stylesheet" href="assets/product.css">
 
 </head>
+
 <body>
-    <?php 
-        require_once("sql/connect.php");
-        $sql = "select * from sua";
-        $result = mysqli_query($conn, $sql);
+    <?php
+    require_once("sql/connect.php");
+    $sql = "select * from sua";
+    $result = mysqli_query($conn, $sql);
     ?>
     <div class="wrapper">
         <!-- header -->
@@ -29,8 +31,8 @@
                         <ul>
                             <li>
                                 <a href="#">Mua hàng và CSKH: <b class="number">
-                                    <i class="fa-solid fa-phone icon-phone item-icon"></i>
-                                    1800 6969</b>
+                                        <i class="fa-solid fa-phone icon-phone item-icon"></i>
+                                        1800 6969</b>
                                 </a>
                             </li>
                             <li>
@@ -38,7 +40,7 @@
                                 <i class="fa-brands fa-facebook icon-fb item-icon"></i>
                                 <i class="fa-brands fa-instagram icon-ig item-icon"></i>
                             </li>
-                        
+
                         </ul>
                     </div>
                     <div class="nav-menu2">
@@ -56,7 +58,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- header width search -->
                 <div class="header-with-search">
                     <!-- logo -->
@@ -84,12 +86,12 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>                    
+                        </div>
                         <button class="header__seacrh-btn">
                             <i class="fa-solid fa-magnifying-glass btn-icon"></i>
                         </button>
-                    </div>              
-                    
+                    </div>
+
                     <!-- giỏ hàng -->
                     <div class="header-cart">
                         <!-- co san pham -->
@@ -98,11 +100,11 @@
                             <!-- <span class="cart-notice">3</span> -->
                             <!-- no cart -->
                             <div class="cart-list no-cart">
-                                <img src="/img/no-cart.png" alt="Giỏ hàng trống\" class="img-nocart">
+                                <img src="img/no-cart.png" alt="Giỏ hàng trống" class="img-nocart">
                                 <span class="cart-list-msg">Chưa có sản phẩm</span>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <section id="Slider">
@@ -131,7 +133,7 @@
                             slider(index)
                         })
                     })
-            
+
                     function imgSlide() {
                         index++;
                         if (index >= imgNumber) {
@@ -139,7 +141,7 @@
                         }
                         slider(index)
                     }
-            
+
                     function slider(index) {
                         imgContainer.style.left = "-" + index * 100 + "%"
                         const dotActive = document.querySelector('.active')
@@ -149,64 +151,39 @@
                     setInterval(imgSlide, 3000)
                 </script>
             </div>
-            
+
         </div>
         <!-- Nội dung chính -->
         <div class="main">
-            <!-- menu -->
-            <div class="menu">
-                <h3><i class="fa-solid fa-list"></i> Danh mục sản phẩm</h3>
-                <div class="menu-list">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox" class="check" name="danhmuc">
-                                Sữa bột trẻ em</a></li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox" class="check" name="danhmuc">                               
-                                Sữa không đường</a></li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox" class="check" name="danhmuc">                               
-                                Sữa tươi</a></li>
-                        <li>
-                            <a href="#">
-                                <input type="checkbox" class="check" name="danhmuc">                              
-                                Sữa nhập khẩu</a></li>
-                    </ul>
-                </div>
 
-            </div>
             <!-- sản phẩm -->
             <div class="content">
-                <div class="product1">
-                <?php 
-                    while($row = mysqli_fetch_assoc($result)){
-                ?>
-                <div class="product-info">
-                    <div class="img">
+                <div class="product1" >
+                    <?php
+                    while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                        <a class="product-info" href="./sanpham.php?id=<?php echo $row['id'] ?>">
+                            <div class="img">
 
-                        <img src="images/product/<?php echo $row["masua"]; ?>.webp" alt="Ảnh minh hoạ">
-                    </div>
-                    <div class="text">
-                        <p><?php echo $row["tensua"]; ?></p>
-                        <p><?php echo $row["loaisua"];?></p>
-                        <p><?php echo $row["hangsua"];?></p>
-                        <p><?php echo $row["trongluong"];?></p>
-                        <p><?php echo $row["dongia"];?></p>
+                                <img src="images/product/<?php echo $row["masua"]; ?>.webp" alt="Ảnh minh hoạ">
+                            </div>
+                            <div class="text">
+                                <p><?php echo $row["tensua"]; ?></p>
+                                <p><?php echo $row["loaisua"]; ?></p>
+                                <p><?php echo $row["hangsua"]; ?></p>
+                                <p><?php echo $row["trongluong"]; ?></p>
+                                <p><?php echo $row["dongia"]; ?></p>
 
-                    </div>
-                    
-                </div>
-                <?php
+                            </div>
+                        </a>
+                    <?php
                     }
                     mysqli_close($conn);
-                ?>
+                    ?>
                 </div>
             </div>
         </div>
-               
+
         <!-- footer -->
         <div class="footer">
             <!-- list -->
@@ -216,18 +193,21 @@
                     <ul>
                         <li>
                             <i class="fa-regular fa-envelope footer-icon"></i>
-                            <a href="#">Email: cskh@milk.com</a></li>
+                            <a href="#">Email: cskh@milk.com</a>
+                        </li>
                         <li>
                             <i class="fa-solid fa-phone footer-icon"></i>
-                            <a href="#">Điện thoại: 028 7300 6609</a></li>
+                            <a href="#">Điện thoại: 028 7300 6609</a>
+                        </li>
                         <li>
                             <i class="fa-solid fa-location-dot footer-icon"></i>
-                            <a href="#">Địa chỉ: 109 Thanh Xuân, Hà Nội</a></li>
+                            <a href="#">Địa chỉ: 109 Thanh Xuân, Hà Nội</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="one">
                     <h3 class="head-footer">Hỗ Trợ Khách Hàng</h3>
-    
+
                     <ul>
                         <li><a href="#">Tra cứu hóa đơn</a></li>
                         <li><a href="#">Mua & giao nhận Online</a></li>
@@ -248,33 +228,33 @@
                         <img class="footer__pay-link" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/shoppe-pay.png" alt="shopee Pay">
                         <img class="footer__pay-link" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/atm-pay.png" alt="atm Pay">
                         <img class="footer__pay-link" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/kredivo-pay.png" alt="kre Pay">
-        
+
                     </div>
                 </div>
                 <div class="one">
                     <h3 class="head-footer">Kết Nối với Chúng Tôi</h3>
                     <ul>
-                        <li>                          
+                        <li>
                             <a href="#">
-                                <i class="footer-icon fa-brands fa-facebook"></i>                             
+                                <i class="footer-icon fa-brands fa-facebook"></i>
                                 Facebook
                             </a>
                         </li>
-                        <li>                           
+                        <li>
                             <a href="#">
-                                <i class="footer-icon fa-brands fa-tiktok"></i>                               
+                                <i class="footer-icon fa-brands fa-tiktok"></i>
                                 Tiktok
                             </a>
                         </li>
-                        <li>                        
+                        <li>
                             <a href="#">
-                                <i class="footer-icon fa-brands fa-instagram"></i>                                
+                                <i class="footer-icon fa-brands fa-instagram"></i>
                                 Instagram
                             </a>
                         </li>
-                        <li>                          
+                        <li>
                             <a href="#">
-                                <i class="footer-icon fa-brands fa-youtube"></i>                              
+                                <i class="footer-icon fa-brands fa-youtube"></i>
                                 Youtube
                             </a>
                         </li>
@@ -286,4 +266,5 @@
         </div>
     </div>
 </body>
+
 </html>
