@@ -83,11 +83,7 @@
     $result = mysqli_query($conn, $sql);
     //kiem tra nut subbmit da duoc them hay chua
     ?>
-<<<<<<< HEAD
-     <div class="container">
-=======
     <div class="container">
->>>>>>> 5f4643da609d1b62902a4c159caa9fbc44c2de21
         <table class="side" border="1">
                 <caption class="color_header">THÔNG TIN HÃNG SỮA</caption>
 
@@ -126,10 +122,6 @@
         mysqli_close($conn)
         ?>
         </table>
-<<<<<<< HEAD
-=======
-
->>>>>>> 5f4643da609d1b62902a4c159caa9fbc44c2de21
     </div>
 </body>
 </html>

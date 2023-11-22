@@ -105,9 +105,9 @@ h2{
                 <td><label for="">Loại Sữa</label></td>
                 <td>
                     <select name="txtloaisua" id="">
-                        <option value="0">sua Tuoi</option>
-                        <option value="1">Sua bot</option>
-                        <option value="2">Sua chua</option>
+                        <option value="Sữa Tươi">Sữa Tươi</option>
+                        <option value="Sữa Bột">Sữa Bột</option>
+                        <option value="Sữa Chua">Sữa Chua</option>
                     </select>
                 </td>
             </tr>
