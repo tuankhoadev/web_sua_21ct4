@@ -4,6 +4,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cập nhập thông tin khách hàng</title>
+        <style>
+            .container{
+                border: 1px solid black;
+                width: 25%;
+                background-color: pink;
+                margin: auto;
+            }
+            .header{
+                text-align: center;
+                /* height: 30px; */
+                margin-top: 0;
+                padding-top: 10px;
+                
+           
+                color: rgb(255, 255, 255);
+                background-color: red;  
+            }
+            
+            table
+            {
+                padding-top: -16px;
+                padding-left: 20px;
+            }
+            .side{
+                width: 100%;
+            }
+            tr{
+                margin-top: 8px;
+            }
+            tr{
+                padding-left: 10px;
+            }
+            td{
+                padding-right: 20px;
+            }
+        </style>
     </head>
     <body>
         <?php
@@ -51,8 +87,9 @@
 
         ?>
     <form  method="post">
-            <table>
-                <caption>CẬP NHẬP THÔNG TIN KHÁCH HÀNG</caption>
+        <div class="container">
+            <div class="header"><h2>Sữa thông tin</h2></div>
+            <table class="side">
                 <tr>
                     <td>Mã Khách hàng: </td>
                     <td><input type="text" name="txtMakh" value="<?php echo $row['makh']; ?>"></td>
@@ -93,6 +130,7 @@
                 </tr>
     
             </table>
+        </div>
 
         </form>
         

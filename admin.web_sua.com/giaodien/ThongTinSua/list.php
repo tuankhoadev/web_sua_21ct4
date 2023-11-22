@@ -7,10 +7,13 @@
     </head>
     <style>
         .container{
-            width: 100%;
+            width: 80%;
             
             border: 1px solid #000;
-            
+            margin: auto;
+        }
+        .color_header{
+            background: #e0eeee;
         }
         caption{
             padding-top: 15px;
@@ -19,9 +22,7 @@
             color: blue;
             font-family:'Courier New', Courier, monospace
         }
-        caption .color_header{
-            background: #e0eeee;
-        }
+        
         
         .side{
             width: 100%;
