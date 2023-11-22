@@ -87,7 +87,6 @@
         ?>
         <div class="container">
             <table class="side" border="1">
-                
                 <caption class="color_header" >THÔNG TIN HÃNG SỮA</caption>
                 <tr>
                     <th>Mã HS</th>

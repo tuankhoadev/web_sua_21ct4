@@ -75,7 +75,7 @@
     <form  method="post">
             <div class="container">
             
-                <div class="h2"> <h2>Thêm thông tin sữa</h2></div>
+                <div class="h2"> <h2>THÊM THÔNG TIN</h2></div>
                 <table class="side" >
                     <tr>
                         <td>Số TT</td>
