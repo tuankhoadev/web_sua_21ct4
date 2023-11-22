@@ -4,6 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cap nhat Hãng sữa</title>
+        <style>
+            .container{
+                border: 1px solid black;
+                width: 30%;
+                background-color: pink;
+                margin: auto;
+            }
+            .header{
+            text-align: center;
+            /* height: 30px; */
+                margin-top: 0;
+                padding-top: 10px;
+                
+           
+                color: rgb(255, 255, 255);
+                background-color: red;
+            }
+            table
+            {
+                padding-left: 20px;
+            }
+            .side{
+                width: 100%;
+            }
+            tr{
+                margin-top: 8px;
+            }
+            td .btn{
+                margin-top: 20px;
+                margin-left: 50px;
+                text-align: center;
+            }
+            tr{
+                padding-left: 10px;
+            }
+
+        </style>
     </head>
     <body>
         <?php
@@ -34,8 +71,12 @@
 
         ?>
     <form  method="post">
-    <table>
-                <caption>THEM THÔNG TIN KHÁCH HÀNG</caption>
+        <div class="container">
+
+            <div class="header">
+                <h3>THEM THÔNG TIN KHÁCH HÀNG</h3>
+            </div>
+            <table class="side">
                 <tr>
                     <td>Mã Khách hàng: </td>
                     <td><input type="text" name="txtMakh"></td>
@@ -61,7 +102,7 @@
                 </tr>
                 <tr>
                     <td>Điện thoại</td>
-                    <td><input type="text" name="txtSodienthoai" >"></td>
+                    <td><input type="text" name="txtSodienthoai" ></td>
                     
                 </tr>
                 <tr>
@@ -71,13 +112,14 @@
                 </tr>
                 <tr>
                     <td >
-                        <input type="submit" name="btnthem" value="them">
+                        <input type="submit" name="btnthem" value="Thêm">
                     </td>
                 </tr>
     
             </table>
+        </div>
 
-        </form>
+    </form>
         
     </body>
 </html>

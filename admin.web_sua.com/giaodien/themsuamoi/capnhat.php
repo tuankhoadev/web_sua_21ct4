@@ -86,7 +86,7 @@ h2{
     
 ?>
      <form class="div1" method="post"> 
-        <h2>xoa</h2>
+        <h2>Sửa</h2>
         <table>
             <tr>
                 <td><label for="">Mã Sữa</label></td>
@@ -143,7 +143,7 @@ h2{
                 <td><input type="file" value="them file" name="txthinhanh" value="<?php echo $row['hinhanh']; ?>"></td>
             </tr>
             <tr>
-                <td><input type="submit" value="capnhat" class="submit" name= "btncapnhat"></td>
+                <td><input type="submit" value="Update" class="submit" name= "btncapnhat"></td>
             </tr>
         </table>
     </form>
