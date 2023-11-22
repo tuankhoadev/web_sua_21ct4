@@ -20,7 +20,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #ffcccc;
+    background: #43544e;
     background-size: cover;
     background-position: center;
 }
@@ -120,17 +120,17 @@ body{
        require_once("connect.php");
         $pass1 = md5($pass);
        //cach 1 lay nguoi dung ma hoa pass bang md5
-       $sql = "select count(*) as dem from dangky where userid = '$username' and password = '$pass1' ";
+       $sql = "select count(*) as dem from user where userid = '$username' and password = '$pass1' ";
        //result la 1 table co 1 hang
        $result = mysqli_query($conn, $sql);
         //row la mang chi co 1 phan tu co key la dem
        $row = mysqli_fetch_assoc($result);
        if($row["dem"]>0)
        {
-        echo "thanh cong";
-        header("location:giaodien.html");
+            echo "thanh cong";
+            header("location:giaodien.php");
        }else{
-        echo "that bai";
+            echo "that bai";
        }
    }
     ?>

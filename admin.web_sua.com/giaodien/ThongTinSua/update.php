@@ -5,6 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cập nhập thông tin hãng sữa</title>
     </head>
+    <style>
+        .container{
+                border: 1px solid black;
+                width: 25%;
+                background-color: pink;
+                margin: auto;
+            }
+            h2{
+                text-align: center;
+                height: 30px;
+                margin-top: 0;
+                padding-top: 10px;
+                
+           
+                color: rgb(255, 255, 255);
+                background-color: red;  
+            }
+        
+            table
+            {
+                padding-top: -16px;
+                padding-left: 20px;
+            }
+            .side{
+                width: 100%;
+            }
+            tr{
+                margin-top: 8px;
+            }
+            td .btn{
+                margin-top: 20px;
+                margin-left: 50px;
+                text-align: center;
+            }
+            tr{
+                padding-left: 10px;
+            }
+            td{
+                padding-right: 20px;
+            }
+            
+    </style>
     <body>
         <?php
             //dua du lieu cu len form
@@ -52,7 +94,10 @@
 
         ?>
     <form  method="post">
+        <div class="container">
+
             <table>
+                <div class="h2"><h2>Sửa thông tin</h2></div>
                 <tr>
                     <td>Số TT</td>
                     <td><input type="text" name="txtSott" value="<?php echo $row['sott']; ?>"></td>
@@ -111,6 +156,7 @@
                 </tr>
     
             </table>
+        </div>
 
         </form>
         

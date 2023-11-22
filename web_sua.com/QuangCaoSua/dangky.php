@@ -21,7 +21,7 @@ session_start();
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: #ffcccc;
+        background: #43544e;
         background-size: cover;
         background-position: center;
     }
@@ -115,8 +115,12 @@ session_start();
     {
         $username = $_POST["txtName"];
         $email = $_POST["txtEmail"];
+
+        
         $password = md5($_POST["txtPass"]);
+
         require_once("connect.php");
+
         $sql = "insert into user values('$username', '$email', '$password')";
         $result = mysqli_query($conn, $sql);
         if($result)
@@ -126,7 +130,7 @@ session_start();
         }
         else
         {
-            echo "da ton tai";
+            echo "Đã tồn tại tài khoản này";
             echo mysqli_error($conn);
         }
     }
@@ -138,18 +142,22 @@ session_start();
             <div class="input-box">
                 <input type="text" placeholder="Username"required name="txtName">
             </div>
+
             <div class="input-box">
                 <input type="text" placeholder="email"  name="txtEmail">
                 <i class='bx bx-envelope'></i>
             </div>
+
             <div class="input-box">
                 <input type="password" placeholder="Password"required name="txtPass">
                 <i class="bx bxs-lock-alt"></i>
             </div>
+
             <div class="remember-forget">
                 <label><input type="checkbox"> Ingat saya</label>
             </div>
-            <button type="submit" class="btn" name="btnDangKy">Dang ky</button>
+
+            <button type="submit" class="btn" name="btnDangKy">Đăng ký</button>
         </form>
     </div>
 </body>

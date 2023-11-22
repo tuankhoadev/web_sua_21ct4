@@ -90,7 +90,7 @@
 }
 .header__seacrh{
     height: 50px;
-    display: flex;
+    /* display: flex; */
     background-color: #fff;
     border: 3px solid #dd1c60;
     border-radius: 3px;
@@ -109,14 +109,14 @@
     outline: none;
     font-size: 1.2rem;
     border-radius: 2px;
-    padding-left: 10px;
+    padding: 10px 10px;
 }
 
 .header-input:focus ~ .header__search-history{
     display: block;
 }
 /* lich su tim kiem */
-.header__search-history{
+/* .header__search-history{
     position: absolute;
     top: calc(100% + 6px);
     left: 0;
@@ -155,24 +155,21 @@
     font-size: 1.4rem;
     color: #413838;
     line-height: 38px;
-}
+} */
 /* button search */
-.header__seacrh-btn{
-    background-color: #dd1c60;
+
+.search{
+    float: right;
+    margin: 10px 10px 0 0;
     border: none;
-    height: 40px;
-    width: 60px;
-    border-radius: 3px;
-    padding: 4px 4px;
+    background-color: #dd1c60;
     outline: none;
-    margin-left: 200px;
-    margin-top: 2px;
-    margin-right: 3px;
+    padding: 5px;
+    color: #fff;
+    border-radius: 3px;
+   
 }
-.header__seacrh-btn:hover{
-    color: #e587a6;
-    cursor: pointer;
-}
+
 .btn-icon{
     color: #fff;
     font-size: 16px;

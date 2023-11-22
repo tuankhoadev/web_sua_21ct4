@@ -14,7 +14,7 @@
 
 <body>
     <?php
-    require_once("sql/connect.php");
+    require_once("connect.php");
     $sql = "select * from sua";
     $result = mysqli_query($conn, $sql);
     ?>
@@ -69,27 +69,17 @@
                     </div>
                     <!-- tìm kiếm -->
                     <div class="header__seacrh">
-                        <div class="header__seacrh-wrap">
-                            <input type="text" class="header-input" placeholder="Nhập để tìm kiếm sản phẩm">
-                            <!-- lich su tim kiem -->
-                            <div class="header__search-history">
-                                <h3 class="history-search">Lịch sử tìm kiếm</h3>
-                                <ul class="history-list">
-                                    <li class="history-item">
-                                        <a href="">Sữa chua Vinamilk</a>
-                                    </li>
-                                    <li class="history-item">
-                                        <a href="">Sữa Meiji thanh Infant Formula 432g</a>
-                                    </li>
-                                    <li class="history-item">
-                                        <a href="">Sữa Enfagrow A2 NeuroPro số 3 800g</a>
-                                    </li>
-                                </ul>
+                        <form action="./timkiem.php" method="post">
+                            <div class="header__seacrh-wrap">
+                                <input type="text" class="header-input" placeholder="Nhập để tìm kiếm sản phẩm" name="tukhoa">
+                                <!-- lich su tim kiem -->
+                                <!-- <div class="header__search-history">
+                                    <h3 class="history-search">Lịch sử tìm kiếm</h3>
+                                </div> -->
+                                <input type="submit" value="Tìm kiếm" name="timkiem" class="search">
                             </div>
-                        </div>
-                        <button class="header__seacrh-btn">
-                            <i class="fa-solid fa-magnifying-glass btn-icon"></i>
-                        </button>
+                            
+                        </form>
                     </div>
 
                     <!-- giỏ hàng -->
@@ -158,7 +148,7 @@
 
             <!-- sản phẩm -->
             <div class="content">
-                <div class="product1" >
+                <div class="product1">
                     <?php
                     while ($row = mysqli_fetch_assoc($result)) {
                     ?>
