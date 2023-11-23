@@ -45,40 +45,45 @@
 </head>
 
 <body>
-    <?php
-    //dua du lieu cu len form
-    // lay id truyen tu trang danhsach,php bawng bien co ten la key
-    $id = $_GET["key"];
-    // lay thong tin the loai co id laf $id
-    require_once("connect.php");
-    $sql = "select * from thongtinhs where id = $id";
-    // $result laf 1 table (table nay chi co 1 hang)
-    $result = mysqli_query($conn, $sql);
-    // lay hang trong table
-    // $row chua thong tin cua the loai can sua
-    // row la mang co chua cac tu khoa: id, ten, thu tu, anhien
-    $row = mysqli_fetch_assoc($result);
-    // cap nhat
-    if (isset($_POST["btnHuy"])) {
+<?php
+            //dua du lieu cu len form
+            // lay id truyen tu trang danhsach,php bawng bien co ten la key
+            $id = $_GET["key"];
+            // lay thong tin the loai co id laf $id
+            require_once("connect.php");
+            $sql = "select * from thongtinhs where id = $id";
+            // $result laf 1 table (table nay chi co 1 hang)
+            $result = mysqli_query($conn,$sql);
+            // lay hang trong table
+            // $row chua thong tin cua the loai can sua
+            // row la mang co chua cac tu khoa: id, ten, thu tu, anhien
+            $row = mysqli_fetch_assoc($result);
+            // cap nhat
+            if(isset($_POST["btnHuy"]))
+            {
 
-        // lay du lieu tren form 
-        $mahs = $_POST["txtMaHS"];
-        $tenhangsua = $_POST["txtTenhangsua"];
-        $diachi = $_POST["txtDiachi"];
-        $sodienthoai = $_POST["txtDienthoai"];
-        $email = $_POST["txtEmail"];
-        $sql = "delete from thongtinhangsua where id = $id";
-        $result = mysqli_query($conn, $sql);
-        if ($result) {
-            mysqli_close($conn);
-            header(("location: list.php"));
-        } else {
-            echo " Delete thất bại" . mysqli_error($conn);
-        }
-    }
+                // lay du lieu tren form 
+                $mahs = $_POST["txtMaHS"];
+                $tenhangsua = $_POST["txtTenhangsua"];
+                $diachi = $_POST["txtDiachi"];
+                $dienthoai = $_POST["txtDienthoai"];
+                $email = $_POST["txtEmail"];
+                $sql = "delete from thongtinhs where id = $id";
+                $result = mysqli_query($conn, $sql);
+                if($result)
+                {
+                    mysqli_close($conn);
+                    header(("location: list.php"));
+                }
+                else{
+                    echo " Delete thất bại" . mysqli_error($conn);
+                }
+            }
 
 
-    ?>
+        ?>
+
+
     <form method="post">
         <div class="container">
             <div class="header">
