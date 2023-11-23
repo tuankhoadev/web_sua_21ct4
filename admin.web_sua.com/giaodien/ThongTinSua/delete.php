@@ -49,7 +49,7 @@
             $id = $_GET["key"];
             // lay thong tin the loai co id laf $id
             require_once("connect.php");
-            $sql = "select * from sua where id = $id";
+            $sql = "select * from themmoi where id = $id";
             // $result laf 1 table (table nay chi co 1 hang)
             $result = mysqli_query($conn,$sql);
             // lay hang trong table
@@ -68,7 +68,7 @@
                 $trongluong = $_POST["txtTrongluong"];
                 $dongia = $_POST["txtDongia"];
 
-                $sql = "delete from sua  where id = $id";
+                $sql = "delete from themmoi  where id = $id";
                 $result = mysqli_query($conn, $sql);
                 if($result)
                 {

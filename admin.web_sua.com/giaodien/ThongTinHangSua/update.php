@@ -41,7 +41,7 @@
         </style>
     </head>
     <body>
-        <?php
+    <?php
             //dua du lieu cu len form
             // lay id truyen tu trang danhsach,php bawng bien co ten la key
             $id = $_GET["key"];
@@ -62,13 +62,9 @@
                 $mahs = $_POST["txtMaHS"];
                 $tenhangsua = $_POST["txtTenhangsua"];
                 $diachi = $_POST["txtDiachi"];
-                $sodienthoai = $_POST["txtDienthoai"];
+                $dienthoai = $_POST["txtDienthoai"];
                 $email = $_POST["txtEmail"];
-                $sql = "update thongtinhangsua set mahs = '$mahs',
-                                               tenhangsua = '$tenhangsua',
-                                               diachi = '$diachi', 
-                                               dienthoai = '$sodienthoai', 
-                                               email = '$email'
+                $sql = "update thongtinhs set mahs = '$mahs',tenhangsua = '$tenhangsua',diachi = '$diachi', dienthoai = $dienthoai, email = '$email'
                                         where id = $id";
                 $result = mysqli_query($conn, $sql);
                 if($result)

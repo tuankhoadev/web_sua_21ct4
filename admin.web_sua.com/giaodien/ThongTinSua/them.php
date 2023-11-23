@@ -57,8 +57,8 @@
                 $trongluong = $_POST["txtTrongluong"];
                 $dongia = $_POST["txtDongia"];
 
-                $sql = "insert into sua (sott,tensua,hangsua,loaisua,trongluong,dongia)
-                                        values('$sott','$tensua','$hangsua','$loaisua','$trongluong','$dongia')";
+                $sql = "insert into themmoi (sott,tensua,hangsua,loaisua,trongluong,dongia)
+                                        values($sott,'$tensua','$hangsua','$loaisua','$trongluong','$dongia')";
                 $result = mysqli_query($conn, $sql);
                 if($result)
                 {

@@ -69,9 +69,9 @@ h2{
         $dongia = $_POST["txtdongia"];
         $thanhphan = $_POST["txttpdd"];
         $loiich = $_POST["txtloiich"];
-        $hinhanh = $_POST["txthinhanh"];
+     $hinhanh = $_POST["txthinhanh"];
         $sql = "update sua set masua = '$ma', tensua = '$ten', hangsua = '$hangsua', loaisua = '$loaisua', trongluong = '$trongluong',
-                                dongia = '$dongia', thanhphandinhduong = '$thanhphan', loiich = '$loiich', hinhanh = '$hinhanh' 
+                                dongia = '$dongia', thanhphandinhduong = '$thanhphan', loiich = '$loiich' 
                                 where id = $id";
         $result = mysqli_query($conn, $sql);
         if($result){
@@ -138,10 +138,7 @@ h2{
                 <td><label for="">Lợi ích</label></td>
                 <td><input type="text" name="txtloiich" value="<?php echo $row['loiich']; ?>"></td>
             </tr>
-            <tr>
-                <td><label for="">Hình ảnh</label></td>
-                <td><input type="file" value="them file" name="txthinhanh" value="<?php echo $row['hinhanh']; ?>"></td>
-            </tr>
+            
             <tr>
                 <td><input type="submit" value="Update" class="submit" name= "btncapnhat"></td>
             </tr>
