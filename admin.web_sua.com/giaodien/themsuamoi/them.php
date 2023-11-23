@@ -53,6 +53,7 @@ h2{
         // require_once gop file neu file gop bi loi thi ma lenh php ben duoi se dung thuc thi
         require_once("connect.php");
         // lay du lieu ti form chuyen len
+        $id = $_POST["txtid"];
         $ma = $_POST["txtma"];
         $ten = $_POST["txttensua"];
         $hangsua = $_POST["txthangsua"];

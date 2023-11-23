@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2023 at 09:26 AM
+-- Generation Time: Nov 22, 2023 at 09:58 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,12 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
+  `hoten` varchar(150) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `sodienthoai` int(11) NOT NULL,
+  `diachi` varchar(200) NOT NULL,
+  `matkhau` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `hoten`, `email`, `sodienthoai`, `diachi`, `matkhau`) VALUES
+(1, 'tuan khoa', 'tuankhoa@gmail.com', 338133849, 'binh dinh', '$2y$10$FSXd83LmRO6TgUdnvYgdg.nkZtLE4ZeI5W/u53Adwcz1fmnQ5Orgy');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sua`
 --
 
 CREATE TABLE `sua` (
-  `id` int(254) NOT NULL,
-  `sott` int(255) NOT NULL,
+  `id` int(11) NOT NULL,
   `masua` char(5) NOT NULL,
   `tensua` varchar(30) NOT NULL,
   `hangsua` varchar(30) NOT NULL,
@@ -45,36 +66,20 @@ CREATE TABLE `sua` (
 -- Dumping data for table `sua`
 --
 
-INSERT INTO `sua` (`id`, `sott`, `masua`, `tensua`, `hangsua`, `loaisua`, `trongluong`, `dongia`, `loiich`, `thanhphandinhduong`, `hinhanh`) VALUES
-(1, 1, 'dl1', 'sua bo', 'Vinamilk', 'sữa tươi', '170 gram', '3.600 VNĐ', 'khong co', 'khong co', ''),
-(2, 2, 'dl1', '', 'Vinamilk', '0', '190 gram', '3.600 VNĐ', 'khong co', 'khong co', ''),
-(3, 3, 'dl1', '', 'Vinamilk', '0', '190 gram', '3.600 VNĐ', 'khong co', 'khong co', ''),
-(4, 4, 'dl1', '', 'Vinamilk', '0', '190 gram', '3.600 VNĐ', 'khong co', 'khong co', ''),
-(5, 5, 'dl1', '', 'Vinamilk', '0', '190 gram', '3.600 VNĐ', 'khong co', 'khong co', ''),
-(6, 6, 'dl1', '', 'Vinamilk', '0', '190 gram', '3.600 VNĐ', 'khong co', 'khong co', ''),
-(7, 7, 'dl1', '', 'Vinamilk', '0', '190 gram', '3.600 VNĐ', 'khong co', 'khong co', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `themmoi`
---
-
-CREATE TABLE `themmoi` (
-  `id` int(11) NOT NULL,
-  `masua` char(5) NOT NULL,
-  `mahang` char(5) NOT NULL,
-  `loiich` varchar(255) NOT NULL,
-  `thanhphandinhduong` varchar(255) NOT NULL,
-  `hinhanh` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `themmoi`
---
-
-INSERT INTO `themmoi` (`id`, `masua`, `mahang`, `loiich`, `thanhphandinhduong`, `hinhanh`) VALUES
-(1, 'UTF88', 'DL', 'khong co', 'khong co', '');
+INSERT INTO `sua` (`id`, `masua`, `tensua`, `hangsua`, `loaisua`, `trongluong`, `dongia`, `loiich`, `thanhphandinhduong`, `hinhanh`) VALUES
+(1, 'abb2', 'sữa', 'Abbott', 'sữa tươi', '2000 gram', '250000 VND', 'không có', 'không có', ''),
+(2, 'dl1', 'Sữa Tươi', 'Dutch Lady', 'sữa tươi', '180 gram', '3.600 VNĐ', 'khong co', 'không có', ''),
+(3, 'dl2', 'Sữa đặc', 'Dutch Lady', 'sữa tươi', '1000 gram', '72.000 VNĐ', 'không có', 'không có', ''),
+(4, 'vnm1', 'Sữa Tươi', 'Vinamilk', 'sữa tươi', '180 gram', '55.000 VNĐ', 'khong co', 'không có', ''),
+(5, 'vnm2', 'Sữa Chua ND', 'Vinamilk', 'sữa tươi', '150 gram', '3.600 VNĐ', 'khong co', 'không có', ''),
+(6, 'vnm3', 'Sữa Đặc', 'Vinamilk', 'sữa tươi', '500 gram', '25.000 VNĐ', 'không có', 'không có', ''),
+(7, 'vnm4', 'Sữa Đặc', 'Vinamilk', 'sữa tươi', '500 gram', '30.000 VNĐ', 'khong co', 'khong co', ''),
+(8, 'abb1', 'Sữa bột', 'Abbott', 'sữa tươi', '1000 gram', '250.000 VND ', 'không có', 'không có', ''),
+(9, 'dmex1', 'sữa bột', 'Dumex', 'sữa tươi', '1000 gram', '250000 VND', 'không có', 'không có', ''),
+(10, 'dmex2', 'sữa hộp', 'Dumex', 'sữa tươi', '500 gram', '65.000 VND', 'không có', 'không có', ''),
+(11, 'ntf1', 'Sữa Bột', 'Nutifood', 'sữa tươi', '1000 gram', '155.000 VND', 'không có', 'không có', ''),
+(12, 'ntf2', 'Sữa Chai', 'Nutifood', 'sữa tươi', '350 ml', '15.000 VND', 'không có', 'không có', ''),
+(13, 'ntf3', 'sữa tươi', 'Nutifood', 'sữa tươi', '250 ml', '10.000 VND', 'không có', 'không có', '');
 
 -- --------------------------------------------------------
 
@@ -125,6 +130,7 @@ CREATE TABLE `thongtinkhachhang` (
 --
 
 INSERT INTO `thongtinkhachhang` (`id`, `makh`, `tenkh`, `gioitinh`, `diachi`, `sodienthoai`, `email`) VALUES
+(0, 'KH155', 'Giáp Huỳnh Tuấn Khoa', ' Nam ', '59 vo van dung', 55524666, 'tuankhoa11062003@gmail.com'),
 (1, 'KH001', 'Khuất Thuỳ Phương', ' Nữ', 'A21 Nguyễn Oanh Quận Gò Vấp', 9625861, 'ktphuong@gamil.com'),
 (2, 'KH002', 'Đỗ Lâm Thiên', 'Nam', '157 Lê Hồng Phong Quận 10', 36952147, 'dlthien@gmail.com'),
 (3, 'KH003', 'Nguyễn Hữu Thiện', 'Nam', '182 Núi Thành Quận Hải Châu', 3692635, 'nhthien@gmail.com'),
@@ -139,18 +145,17 @@ INSERT INTO `thongtinkhachhang` (`id`, `makh`, `tenkh`, `gioitinh`, `diachi`, `s
 --
 
 --
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- Indexes for table `sua`
 --
 ALTER TABLE `sua`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `themmoi`
---
-ALTER TABLE `themmoi`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD UNIQUE KEY `mahang` (`mahang`);
 
 --
 -- Indexes for table `thongtinhs`
@@ -169,20 +174,16 @@ ALTER TABLE `thongtinkhachhang`
 --
 
 --
--- AUTO_INCREMENT for table `themmoi`
+-- AUTO_INCREMENT for table `login`
 --
-ALTER TABLE `themmoi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT for table `sua`
 --
-
---
--- Constraints for table `themmoi`
---
-ALTER TABLE `themmoi`
-  ADD CONSTRAINT `themmoi_ibfk_1` FOREIGN KEY (`id`) REFERENCES `sua` (`id`);
+ALTER TABLE `sua`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

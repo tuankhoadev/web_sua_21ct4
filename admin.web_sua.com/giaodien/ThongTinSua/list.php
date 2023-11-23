@@ -69,7 +69,7 @@
                 ?>
                     <tr class="content">
                         <td>
-                            <?php  echo $row["sott"]; ?>
+                            <?php  echo $row["id"]; ?>
                         </td>
                         <td>
                             <?php  echo $row["tensua"]; ?>

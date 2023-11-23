@@ -100,7 +100,7 @@
                 <div class="h2"><h2>Sửa thông tin</h2></div>
                 <tr>
                     <td>Số TT</td>
-                    <td><input type="text" name="txtSott" value="<?php echo $row['sott']; ?>"></td>
+                    <td><input type="text" name="txtSott" value="<?php echo $row['id']; ?>"></td>
                     
                 </tr>
                 <tr>
