@@ -70,7 +70,6 @@ $id = $_GET["key"];
         $dongia = $_POST["txtdongia"];
         $thanhphandinhduong = $_POST["txttpdd"];
         $loiich = $_POST["txtloiich"];
-        $hinhanh = $_POST["txthinhanh"];
         $sql = "delete from sua where id = $id";
         $result = mysqli_query($conn, $sql);
         if($result){
@@ -137,10 +136,7 @@ $id = $_GET["key"];
                 <td><label for="">Lợi ích</label></td>
                 <td><input type="text" name="txtloiich" value="<?php echo $row['loiich']; ?>"></td>
             </tr>
-            <tr>
-                <td><label for="">Hình ảnh</label></td>
-                <td><input type="file" value="them file" name="txthinhanh" value="<?php echo $row['hinhanh']; ?>"></td>
-            </tr>
+            
             <tr>
                 <td><input type="submit" value="xoa" class="submit" name= "btncapnhat"></td>
             </tr>

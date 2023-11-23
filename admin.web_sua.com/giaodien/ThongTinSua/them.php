@@ -57,8 +57,8 @@
                 $trongluong = $_POST["txtTrongluong"];
                 $dongia = $_POST["txtDongia"];
 
-                $sql = "insert into sua (sott,tensua,hangsua,loaisua,trongluong,dongia)
-                                        values('$sott','$tensua','$hangsua','$loaisua','$trongluong','$dongia')";
+                $sql = "insert into themmoi (sott,tensua,hangsua,loaisua,trongluong,dongia)
+                                        values($sott,'$tensua','$hangsua','$loaisua','$trongluong','$dongia')";
                 $result = mysqli_query($conn, $sql);
                 if($result)
                 {
@@ -75,7 +75,7 @@
     <form  method="post">
             <div class="container">
             
-                <div class="h2"> <h2>Thêm thông tin sữa</h2></div>
+                <div class="h2"> <h2>THÊM THÔNG TIN</h2></div>
                 <table class="side" >
                     <tr>
                         <td>Số TT</td>

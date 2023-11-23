@@ -44,7 +44,7 @@
             // // Thiết lập thiết bị
             // mysqli_set_charset($conn,"utf8");
              require_once("connect.php");
-            $sql = "select * from sua";
+            $sql = "select * from themmoi";
             $result = mysqli_query($conn,$sql);   
             // $row = mysqli_fetch_assoc($result);         
             
@@ -69,7 +69,7 @@
                 ?>
                     <tr class="content">
                         <td>
-                            <?php  echo $row["sott"]; ?>
+                            <?php  echo $row["id"]; ?>
                         </td>
                         <td>
                             <?php  echo $row["tensua"]; ?>

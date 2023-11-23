@@ -54,7 +54,7 @@
             $id = $_GET["key"];
             // lay thong tin the loai co id laf $id
             require_once("connect.php");
-            $sql = "select * from sua where id = $id";
+            $sql = "select * from themmoi where id = $id";
             // $result laf 1 table (table nay chi co 1 hang)
             $result = mysqli_query($conn,$sql);
             // lay hang trong table
@@ -73,10 +73,10 @@
                 $trongluong = $_POST["txtTrongluong"];
                 $dongia = $_POST["txtDongia"];
 
-                $sql = "update sua set  sott = $sott,
+                $sql = "update themmoi set  sott = $sott,
                                         tensua = '$tensua',
                                         hangsua = '$hangsua',
-                                        loaisua = '$Loaisua', 
+                                        loaisua = '$loaisua', 
                                         trongluong = '$trongluong', 
                                         dongia = '$dongia'
                                         where id = $id";
@@ -100,7 +100,7 @@
                 <div class="h2"><h2>Sửa thông tin</h2></div>
                 <tr>
                     <td>Số TT</td>
-                    <td><input type="text" name="txtSott" value="<?php echo $row['sott']; ?>"></td>
+                    <td><input type="text" name="txtSott" value="<?php echo $row['id']; ?>"></td>
                     
                 </tr>
                 <tr>
@@ -110,7 +110,6 @@
                 </tr>
                 <tr>
                     <td>Hãng Sữa</td>
-                    <!-- <td><input type="text" name="txtHangsua" value="<?php echo $row['hangsua']; ?>"></td> -->
                     <td>
                         <select name="txtHangsua" >
                             <option value="Vinamilk">Vinamilk</option>

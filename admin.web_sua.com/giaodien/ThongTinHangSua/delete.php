@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cap nhat Hãng sữa</title>
-    </head>
-    <body>
-        <?php
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap nhat Hãng sữa</title>
+    <style>
+            .container{
+               
+                border: 1px solid black;
+                width: 25%;
+                background-color: pink;
+                margin: auto;
+            }
+            .header{
+                text-align: center;
+                /* height: 30px; */
+                margin-top: 0;
+                padding-top: 10px;
+                
+           
+                color: rgb(255, 255, 255);
+                background-color: red;  
+            }
+            
+            table
+            {
+                padding-top: -16px;
+                padding-left: 20px;
+            }
+            .side{
+                width: 100%;
+            }
+            tr{
+                margin-top: 8px;
+            }
+            tr{
+                padding-left: 10px;
+            }
+            td{
+                padding-right: 20px;
+            }
+        </style>
+</head>
+
+<body>
+<?php
             //dua du lieu cu len form
             // lay id truyen tu trang danhsach,php bawng bien co ten la key
             $id = $_GET["key"];
@@ -27,9 +66,9 @@
                 $mahs = $_POST["txtMaHS"];
                 $tenhangsua = $_POST["txtTenhangsua"];
                 $diachi = $_POST["txtDiachi"];
-                $sodienthoai = $_POST["txtDienthoai"];
+                $dienthoai = $_POST["txtDienthoai"];
                 $email = $_POST["txtEmail"];
-                $sql = "delete from thongtinhangsua where id = $id";
+                $sql = "delete from thongtinhs where id = $id";
                 $result = mysqli_query($conn, $sql);
                 if($result)
                 {
@@ -43,43 +82,51 @@
 
 
         ?>
-    <form  method="post">
-            <table border="1">
-                <caption>XOÁ HÃNG SỮA</caption>
-            <tr>
+
+
+    <form method="post">
+        <div class="container">
+            <div class="header">
+                <h3>Xoá hãng sữa</h3>
+            </div>
+            <table class="side">
+
+                <tr>
                     <td>Mã HS</td>
                     <td><input type="text" name="txtMaHS" value="<?php echo $row['mahs']; ?>"></td>
-                    
+
                 </tr>
                 <tr>
                     <td>Tên hãng sữa</td>
                     <td><input type="text" name="txtTenhangsua" value="<?php echo $row['tenhangsua']; ?>"></td>
-                    
+
                 </tr>
                 <tr>
                     <td>Địa chỉ</td>
                     <td><input type="text" name="txtDiachi" value="<?php echo $row['diachi']; ?>"></td>
-                    
+
                 </tr>
                 <tr>
                     <td>Điện thoại</td>
                     <td><input type="text" name="txtDienthoai" value="<?php echo $row['dienthoai']; ?>"></td>
-                    
+
                 </tr>
                 <tr>
                     <td>Email</td>
                     <td><input type="email" name="txtEmail" value="<?php echo $row['email']; ?>"></td>
-                    
+
                 <tr>
-                    
+
                     <td>
                         <input type="submit" name="btnHuy" value="Xoá">
                     </td>
                 </tr>
-    
-            </table>
 
-        </form>
-        
-    </body>
+            </table>
+        </div>
+
+    </form>
+
+</body>
+
 </html>
