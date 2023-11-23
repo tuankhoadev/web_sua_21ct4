@@ -11,6 +11,10 @@
 	<title>Login</title>
 </head>
 <style>
+		h5 {
+			/* text-align: center; */
+			font-family: Georgia, 'Times New Roman', Times, serif
+		}
 	body {
   background-color: #333333;
   background-size: cover;
@@ -21,7 +25,8 @@
 }
 
 .box-form {
-  margin: 0 auto;
+
+  margin:  auto;
   width: 80%;
   background: #FFFFFF;
   border-radius: 10px;
@@ -33,6 +38,7 @@
 .box-form .left {
   width: 70%;
   color: #FFFFFF;
+  border-radius: 5px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("img/312838563_1272671813467346_5586125078987848754_n.jpg");
@@ -48,8 +54,13 @@
   font-size: 6vmax;
   margin-top: 40px;
 }
-
+.right {
+	text-align: center;
+	background-image: linear-gradient(pink, white);
+}
 .box-form .right{
+	width: 30%;
+	border-radius: 5px;
   padding-left: 30px;
   padding-bottom: 30px;
   overflow: hidden;
@@ -58,11 +69,28 @@
 .box-form .right h5 {
   font-size: 3vmax;
 }
+.sign-up,
+.sign-in{
+	text-align: center;
+}
+.sign-up p a,
+.sign-in p a{
+	text-decoration: none;
+}
+.sign-up h5{
+	padding-left: 8px	;
+}
+input {
+	border-radius: 5px;
+}
 
-.box-form .right .sign-in h5{
+a{
+	color: red;
+}
+/* .box-form .right .sign-in h5{
   padding-top: 50px;
   padding-bottom: 50px;
-}
+}	 */
 
 .box-form .right p {
   font-size: 18px;
@@ -70,7 +98,7 @@
 }
 
 .box-form .right input {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   margin-top: 25px;
   font-size: 16px;
@@ -104,14 +132,14 @@
 }
 
 .box-form .right .sign-up{
-  padding-left: 50px;
+  /* padding-left: 50px; */
   padding-bottom: 10px;
   overflow: hidden;
 }
 
 .box-form .right .sign-up input {
   width: 60%;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   padding: 10px;
   margin-top: 25px;
   font-size: 16px;
@@ -168,6 +196,7 @@
 				});
 				</script>
 			<?php
+			
 			mysqli_close($conn);
 		} else {
 			echo mysqli_error($conn);
@@ -228,7 +257,7 @@
 			<section class="sign-in">
 				<form action="" method="post" onsubmit="return validateSignIn()">
 					<h5>Đăng nhập</h5>
-					<p>Chưa có tài khoản: <a href="#" onclick="changeSignUp()">Tạo tài khoản</a></p>
+					<p>Chưa có tài khoản     <a href="#" onclick="changeSignUp()">Tạo tài khoản</a></p>
 					<input type="text"     name="email"    id="txtEmailSignIn"  placeholder="Email"><br>
 					<input type="password" name="pass"     id="txtPassSignIn"   placeholder="Mật khẩu"><br>
 					<input type="submit"   name="btnSubIn" id="txtSubmitSignIn" value="Đăng nhập">
@@ -239,7 +268,7 @@
 			<section class="sign-up">
 				<form action="" method="post" onsubmit="return validateSignUp()">
 					<h5>Đăng ký</h5>
-					<p>Đã có tài khoản: <a href="#" onclick="changeSignIn()">Đăng nhập</a></p>
+					<p>Đã có tài khoản: <a href="#" onclick="changeSignIn()">  Đăng nhập</a></p>
 					<input type="text"     name="name"    id="txtNameSignUP"    placeholder="Họ và tên">
 					<input type="text"     name="email"   id="txtEmailSignUP"   placeholder="Email"><br>
 					<input type="text"     name="cell"    id="txtCellSignUP"    placeholder="Số điện thoại">
